@@ -81,6 +81,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(146, 23);
             this.txtUser.TabIndex = 2;
+            this.txtUser.EditValueChanged += new System.EventHandler(this.txtUser_EditValueChanged);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // labelControl2
@@ -99,6 +100,9 @@
             this.txtPass.Location = new System.Drawing.Point(112, 142);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
+            // 
+            // 
+            // 
             this.txtPass.Properties.PasswordChar = '♥';
             this.txtPass.Properties.UseSystemPasswordChar = true;
             this.txtPass.Size = new System.Drawing.Size(146, 23);
@@ -143,6 +147,9 @@
             this.pictureEdit2.Location = new System.Drawing.Point(260, 139);
             this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit2.Name = "pictureEdit2";
+            // 
+            // 
+            // 
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -155,6 +162,9 @@
             this.pictureEdit3.Location = new System.Drawing.Point(260, 100);
             this.pictureEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit3.Name = "pictureEdit3";
+            // 
+            // 
+            // 
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -166,6 +176,9 @@
             this.checkLuutaikhoanlogin.Location = new System.Drawing.Point(307, 209);
             this.checkLuutaikhoanlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkLuutaikhoanlogin.Name = "checkLuutaikhoanlogin";
+            // 
+            // 
+            // 
             this.checkLuutaikhoanlogin.Properties.Caption = "Lưu lại tài khoản";
             this.checkLuutaikhoanlogin.Size = new System.Drawing.Size(131, 21);
             this.checkLuutaikhoanlogin.TabIndex = 4;
@@ -176,6 +189,9 @@
             this.pictureEdit4.Location = new System.Drawing.Point(407, 25);
             this.pictureEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit4.Name = "pictureEdit4";
+            // 
+            // 
+            // 
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -202,6 +218,9 @@
             this.image_canhbao.Location = new System.Drawing.Point(35, 174);
             this.image_canhbao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.image_canhbao.Name = "image_canhbao";
+            // 
+            // 
+            // 
             this.image_canhbao.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.image_canhbao.Properties.Appearance.Options.UseBackColor = true;
             this.image_canhbao.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;

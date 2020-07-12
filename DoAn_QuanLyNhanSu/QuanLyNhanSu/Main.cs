@@ -7,15 +7,120 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-
+using DevExpress.XtraBars;
+using DALL_BALL;
 namespace QuanLyNhanSu
 {
-    public partial class Main : DevExpress.XtraEditors.XtraForm
+    public partial class Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        XulyGiaodien tt = new XulyGiaodien();
         public Main()
         {
             InitializeComponent();
+
+            
+           
+        }
+        public void loadfrom(Form frm)
+        {
+
+            frm.Show();
+        }
+
+        private void barDockingMenuItem1_ListItemClick(object sender, ListItemClickEventArgs e)
+        {
+
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            
+         
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+          //  panelControl1.Controls.Clear();
+            PhongBan frm = new PhongBan();
+            //frm.Show();
+            //frm.Dock = DockStyle.Fill;
+            //panelControl1.Controls.Add(frm);
+
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text=="Phòng Ban")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+               tt.AddTab(xtraTabControl1, "", "Phòng Ban", new PhongBan());
+            }
+
+
+        }
+
+        private void navigationPane1_Click(object sender, EventArgs e)
+        {
+            
+           // navigationPage1.Controls.Add(frm);
+        }
+
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "NhanVien")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "NhanVien", new PhongBan());
+            }
+            
+
+        }
+
+        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        {
+            xtraTabControl1.TabPages.RemoveAt(xtraTabControl1.SelectedTabPageIndex);
+        }
+
+        private void panelControl3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

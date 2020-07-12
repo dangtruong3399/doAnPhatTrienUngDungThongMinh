@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForm));
-            //DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QuanLyNhanSu.Main), true, true);
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -56,6 +54,7 @@
             DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.hopdong_bar = new DevExpress.XtraBars.BarSubItem();
             this.barbt_nvchuakyhopdonglannao = new DevExpress.XtraBars.BarButtonItem();
             this.barbt_nvdahethopdong = new DevExpress.XtraBars.BarButtonItem();
@@ -193,7 +192,6 @@
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -208,13 +206,10 @@
             // 
             // ribbonPageGroup4
             // 
-            ribbonPageGroup4.AllowTextClipping = false;
-            ribbonPageGroup4.ItemLinks.Add(this.hopdong_bar);
-            ribbonPageGroup4.ItemLinks.Add(this.baohiem_bar);
-            ribbonPageGroup4.ItemLinks.Add(this.nvnghiviec_bar);
-            ribbonPageGroup4.Name = "ribbonPageGroup4";
-            ribbonPageGroup4.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
-            ribbonPageGroup4.Text = "Hồ sơ nhân viên";
+            this.ribbonPageGroup4.AllowTextClipping = false;
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
+            this.ribbonPageGroup4.Text = "Hồ sơ nhân viên";
             // 
             // hopdong_bar
             // 
@@ -329,6 +324,9 @@
             superToolTip1.Items.Add(toolTipSeparatorItem1);
             superToolTip1.Items.Add(toolTipTitleItem2);
             this.ribbon.ApplicationButtonSuperTip = superToolTip1;
+            // 
+            // 
+            // 
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -400,25 +398,18 @@
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 135;
             this.ribbon.Name = "ribbon";
-            this.ribbon.PageHeaderItemLinks.Add(this.bar_user);
-            this.ribbon.PageHeaderItemLinks.Add(this.bar_ngay);
-            this.ribbon.PageHeaderItemLinks.Add(this.bar_gio);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage_Quanly,
             this.ribbonPage_chamcong,
             this.ribbonPage_bangluong,
             this.ribbonPage_danhmuc,
             this.ribbonPage_hethong});
-            this.ribbon.QuickToolbarItemLinks.Add(this.barButtonItem3);
             this.ribbon.Size = new System.Drawing.Size(1248, 183);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click_1);
             // 
             // applicationMenu1
             // 
-            this.applicationMenu1.ItemLinks.Add(this.bt_dangxuat);
-            this.applicationMenu1.ItemLinks.Add(this.bt_doimatkhau);
-            this.applicationMenu1.ItemLinks.Add(this.bt_thoat);
             this.applicationMenu1.Name = "applicationMenu1";
             this.applicationMenu1.Ribbon = this.ribbon;
             // 
@@ -868,7 +859,7 @@
             this.ribbonPage_Quanly.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
-            ribbonPageGroup4,
+            this.ribbonPageGroup4,
             this.ribbonPageGroup5,
             this.ribbonPageGroup6});
             this.ribbonPage_Quanly.Name = "ribbonPage_Quanly";
@@ -877,29 +868,23 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
-            this.ribbonPageGroup1.ItemLinks.Add(this.btQuanlynhanvien);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Quản lý tổng thể";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Nhập xuất";
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.bt_baocaonhanvien);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btBaocaoNVdenhanhopdong);
-            this.ribbonPageGroup5.ItemLinks.Add(this.bt_NvVaolamtheongay);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Báo cáo";
             // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.AllowTextClipping = false;
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Công đoàn";
             // 
@@ -918,47 +903,36 @@
             // rbg_bangchamcong
             // 
             this.rbg_bangchamcong.AllowTextClipping = false;
-            this.rbg_bangchamcong.ItemLinks.Add(this.btBangcong);
-            this.rbg_bangchamcong.ItemLinks.Add(this.btThemcong);
-            this.rbg_bangchamcong.ItemLinks.Add(this.bt_nhap_excel);
             this.rbg_bangchamcong.Name = "rbg_bangchamcong";
             this.rbg_bangchamcong.Text = "Quản lý chấm công";
             // 
             // rbg_Cacdanhmuc
             // 
             this.rbg_Cacdanhmuc.AllowTextClipping = false;
-            this.rbg_Cacdanhmuc.ItemLinks.Add(this.btChitietphucap);
             this.rbg_Cacdanhmuc.Name = "rbg_Cacdanhmuc";
             this.rbg_Cacdanhmuc.Text = "Các danh mục";
             // 
             // rbg_quanlytangca
             // 
             this.rbg_quanlytangca.AllowTextClipping = false;
-            this.rbg_quanlytangca.ItemLinks.Add(this.btNvTangca);
-            this.rbg_quanlytangca.ItemLinks.Add(this.btThemTangca);
             this.rbg_quanlytangca.Name = "rbg_quanlytangca";
             this.rbg_quanlytangca.Text = "Quản lý tăng ca";
             // 
             // rbg_baocaochamcong
             // 
             this.rbg_baocaochamcong.AllowTextClipping = false;
-            this.rbg_baocaochamcong.ItemLinks.Add(this.btNhanviennghiviec);
-            this.rbg_baocaochamcong.ItemLinks.Add(this.btNvDitre);
-            this.rbg_baocaochamcong.ItemLinks.Add(this.bt_Bcbangcongthang);
             this.rbg_baocaochamcong.Name = "rbg_baocaochamcong";
             this.rbg_baocaochamcong.Text = "Báo cáo chấm công";
             // 
             // rbg_ungluong
             // 
             this.rbg_ungluong.AllowTextClipping = false;
-            this.rbg_ungluong.ItemLinks.Add(this.btNvUngluong);
             this.rbg_ungluong.Name = "rbg_ungluong";
             this.rbg_ungluong.Text = "Quản lý ứng lương";
             // 
             // rbgKhautru
             // 
             this.rbgKhautru.AllowTextClipping = false;
-            this.rbgKhautru.ItemLinks.Add(this.btKhautru);
             this.rbgKhautru.Name = "rbgKhautru";
             this.rbgKhautru.Text = "Khấu trừ";
             // 
@@ -972,7 +946,6 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.AllowTextClipping = false;
-            this.ribbonPageGroup3.ItemLinks.Add(this.btBar_Bangluong);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Bảng lương";
             // 
@@ -987,24 +960,16 @@
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.bt_dmNhanvien);
-            this.ribbonPageGroup10.ItemLinks.Add(this.bt_dmCongdoan);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Nhân viên";
             // 
             // ribbonPageGroup11
             // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.bt_dmBophan);
-            this.ribbonPageGroup11.ItemLinks.Add(this.bt_dmChucvu);
-            this.ribbonPageGroup11.ItemLinks.Add(this.bt_dmLoaicong);
-            this.ribbonPageGroup11.ItemLinks.Add(this.bt_dmPhucap);
-            this.ribbonPageGroup11.ItemLinks.Add(this.bt_dmLoaica);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Công và lương";
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.bt_dmTinh);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Xã hội";
             // 
@@ -1021,34 +986,28 @@
             // rbg_skin
             // 
             this.rbg_skin.AllowTextClipping = false;
-            this.rbg_skin.ItemLinks.Add(this.rb_Skin);
             this.rbg_skin.Name = "rbg_skin";
             this.rbg_skin.Text = "Giao diện";
             // 
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.AllowTextClipping = false;
-            this.ribbonPageGroup7.ItemLinks.Add(this.barbt_saoluu);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barbt_phuchoi);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Sao lưu và phục hồi";
             // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.AllowTextClipping = false;
-            this.ribbonPageGroup8.ItemLinks.Add(this.barbt_taikhoan);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Tài khoản";
             // 
             // ribbonPageGroup9
             // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.check_chucnang);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "Giải trí";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 852);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
@@ -1238,14 +1197,6 @@
             // 
             this.navBarGroup_nhanvien.Caption = "Quản lý nhân viên";
             this.navBarGroup_nhanvien.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup_nhanvien.ImageOptions.SmallImage")));
-            this.navBarGroup_nhanvien.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemQLSV),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemNhapxuatTufileExcel),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_BcNvVaolamNgay),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_BcNcDathoiviec),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBar_NvDenhanKyhopdong),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBar_NvVaoLam),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBar_Congdoan)});
             this.navBarGroup_nhanvien.Name = "navBarGroup_nhanvien";
             // 
             // navBarItemQLSV
@@ -1306,11 +1257,6 @@
             // 
             this.navBarGroup_chamcong.Caption = "Quản lý chấm công";
             this.navBarGroup_chamcong.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup_chamcong.ImageOptions.SmallImage")));
-            this.navBarGroup_chamcong.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_Bangcong),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemQLTangca),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_NvUngluong),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_Khautru)});
             this.navBarGroup_chamcong.Name = "navBarGroup_chamcong";
             // 
             // navBarItem_Bangcong
@@ -1345,8 +1291,6 @@
             // 
             this.navBarGroup_bangluong.Caption = "Quản lý bảng lương";
             this.navBarGroup_bangluong.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup_bangluong.ImageOptions.SmallImage")));
-            this.navBarGroup_bangluong.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_QlDMLuong)});
             this.navBarGroup_bangluong.Name = "navBarGroup_bangluong";
             // 
             // navBarItem_QlDMLuong
@@ -1360,14 +1304,6 @@
             // 
             this.navBarGroup_QLDM.Caption = "Quản lý danh mục";
             this.navBarGroup_QLDM.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup_QLDM.ImageOptions.SmallImage")));
-            this.navBarGroup_QLDM.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMTinh),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMNhanvien),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMbophan),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMChucvu),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMLoaicong),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_DMPhucap),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.bt_congdong)});
             this.navBarGroup_QLDM.Name = "navBarGroup_QLDM";
             // 
             // navBarItem_DMTinh
@@ -1423,10 +1359,6 @@
             // 
             this.navBarGroup_hethong.Caption = "Hệ thống";
             this.navBarGroup_hethong.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup_hethong.ImageOptions.SmallImage")));
-            this.navBarGroup_hethong.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_taikhoan),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_phuchoi),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem_Saoluu)});
             this.navBarGroup_hethong.Name = "navBarGroup_hethong";
             // 
             // navBarItem_taikhoan
@@ -1473,10 +1405,6 @@
             // 
             // radialMenu1
             // 
-            this.radialMenu1.ItemLinks.Add(this.btQuanlynhanvien);
-            this.radialMenu1.ItemLinks.Add(this.barButtonItem1);
-            this.radialMenu1.ItemLinks.Add(this.bt_NvVaolamtheongay);
-            this.radialMenu1.ItemLinks.Add(this.bt_baocaonhanvien);
             this.radialMenu1.Name = "radialMenu1";
             this.radialMenu1.Ribbon = this.ribbon;
             // 
@@ -1533,7 +1461,6 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_Quanly;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lbuser;
@@ -1573,7 +1500,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup_hethong;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarSubItem hopdong_bar;
         private DevExpress.XtraBars.BarButtonItem barbt_nvchuakyhopdonglannao;
         private DevExpress.XtraBars.BarButtonItem barbt_nvdahethopdong;
@@ -1668,5 +1594,8 @@
         private DevExpress.XtraBars.BarButtonItem bt_thoat;
         private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
         private DevExpress.XtraNavBar.NavBarItem bt_congdong;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_Quanly;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }

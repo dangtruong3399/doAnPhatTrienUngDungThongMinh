@@ -8,3 +8,13 @@ D:\WinForm Project\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.csproj.CoreCompileInput
 D:\WinForm Project\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.csproj.CopyComplete
 D:\WinForm Project\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.dll
 D:\WinForm Project\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.pdb
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\bin\Debug\BALL.dll
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\bin\Debug\BALL.pdb
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\bin\Debug\DALL.dll
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\bin\Debug\DALL.pdb
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\bin\Debug\DALL.dll.config
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.csprojAssemblyReference.cache
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.csproj.CoreCompileInputs.cache
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.csproj.CopyComplete
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.dll
+D:\DoAn\DoAn_QuanLyNhanSu\BALL\obj\Debug\BALL.pdb
