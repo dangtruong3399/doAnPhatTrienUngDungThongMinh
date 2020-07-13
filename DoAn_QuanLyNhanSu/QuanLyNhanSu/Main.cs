@@ -127,5 +127,10 @@ namespace QuanLyNhanSu
         {
 
         }
+
+        private void xtraTabControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,7 @@ using DALL_BALL;
 
 namespace QuanLyNhanSu
 {
-    public partial class PhongBan : DevExpress.XtraEditors.XtraUserControl
+    public partial class PhongBan : System.Windows.Forms.UserControl
     {
         PhongBan_DALL_BALL pb = new PhongBan_DALL_BALL();
         TudongTang tudong = new TudongTang();
@@ -61,6 +61,16 @@ namespace QuanLyNhanSu
         }
 
         private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dsphongban_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl5_Click(object sender, EventArgs e)
         {
 
         }
