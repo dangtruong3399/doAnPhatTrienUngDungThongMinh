@@ -122,5 +122,10 @@ namespace QuanLyNhanSu
         {
 
         }
+
+        private void barButtonItem6_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }
