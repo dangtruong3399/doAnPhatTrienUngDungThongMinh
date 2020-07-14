@@ -41,3 +41,5 @@ D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BA
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CopyComplete
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.dll
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.pdb
+C:\Users\KWX\Desktop\doAnPhatTrienUngDungThongMinh\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csprojAssemblyReference.cache
+C:\Users\KWX\Desktop\doAnPhatTrienUngDungThongMinh\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CoreCompileInputs.cache
