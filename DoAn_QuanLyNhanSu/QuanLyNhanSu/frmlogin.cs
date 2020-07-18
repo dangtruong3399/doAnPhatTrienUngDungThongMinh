@@ -8,12 +8,12 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
 using System.Net;
-using BALL;
+
 namespace QuanLyNhanSu
 {
     public partial class frmlogin : DevExpress.XtraEditors.XtraForm
     {
-        Login_BLL da = new Login_BLL();
+        //Login_BLL da = new Login_BLL();
         public frmlogin()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace QuanLyNhanSu
 
         private void hien()
         {
-            this.WindowState = FormWindowState.Normal;
+           
         }
 
 
@@ -48,18 +48,18 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Không được bỏ trống mật khẩu");
                 return;
             }
-            if(da.Checklogin(txtUser.Text,txtPass.Text))
+            //if(da.Checklogin(txtUser.Text,txtPass.Text))
             {
                 MessageBox.Show("Thành Công");
                 Hide();
-                frmMainForm frm = new frmMainForm();
-                frm.Show();
+             //   main frm = new main();
+               // frm.Show();
 
             }
-            else
-            {
-                MessageBox.Show("Mật khẩu hoặc tài khoản sai");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Mật khẩu hoặc tài khoản sai");
+            //}
         }
 
         private void bt_Dangnhap_Click(object sender, EventArgs e)
@@ -91,11 +91,11 @@ namespace QuanLyNhanSu
         #endregion
         private void bt_thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+         
         }
         public void thoat()
         {
-            this.Close();
+           
         }
         private void txtServer_EditValueChanged(object sender, EventArgs e)
         {
@@ -120,8 +120,12 @@ namespace QuanLyNhanSu
 
         private void pictureEdit4_Click(object sender, EventArgs e)
         {
-            this.Close();
+          
         }
-       
+
+        private void txtUser_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
