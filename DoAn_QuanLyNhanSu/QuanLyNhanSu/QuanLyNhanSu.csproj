@@ -118,6 +118,12 @@
     <Compile Include="ThuongPhat.Designer.cs">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTest.Designer.cs">
+      <DependentUpon>UserTest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChamCong.resx">
       <DependentUpon>ChamCong.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="ThuongPhat.resx">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTest.resx">
+      <DependentUpon>UserTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
