@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChamCong.Designer.cs">
+      <DependentUpon>ChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chucvu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="ThuongPhat.Designer.cs">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChamCong.resx">
+      <DependentUpon>ChamCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chucvu.resx">
       <DependentUpon>Chucvu.cs</DependentUpon>
     </EmbeddedResource>
