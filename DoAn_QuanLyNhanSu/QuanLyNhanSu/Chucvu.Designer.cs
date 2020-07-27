@@ -28,43 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chucvu));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.dsChucVu = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnxoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenCv = new DevExpress.XtraEditors.TextEdit();
             this.txtMacv = new DevExpress.XtraEditors.TextEdit();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dsChucVu = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsChucVu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenCv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMacv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsChucVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.dsChucVu);
+            this.panelControl1.Controls.Add(this.btnxoa);
+            this.panelControl1.Controls.Add(this.btnLuu);
+            this.panelControl1.Controls.Add(this.btnSua);
+            this.panelControl1.Controls.Add(this.btnThem);
+            this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.txtTenCv);
             this.panelControl1.Controls.Add(this.txtMacv);
-            this.panelControl1.Controls.Add(this.btnXoa);
-            this.panelControl1.Controls.Add(this.btnLuu);
-            this.panelControl1.Controls.Add(this.btnThem);
-            this.panelControl1.Controls.Add(this.btnSua);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.dsChucVu);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1353, 707);
             this.panelControl1.TabIndex = 0;
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnxoa.Location = new System.Drawing.Point(953, 204);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(115, 30);
+            this.btnxoa.TabIndex = 36;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnLuu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLuu.Location = new System.Drawing.Point(953, 110);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(115, 30);
+            this.btnLuu.TabIndex = 37;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(752, 204);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(108, 30);
+            this.btnSua.TabIndex = 38;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(752, 110);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(108, 30);
+            this.btnThem.TabIndex = 35;
+            this.btnThem.Text = "Thêm";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl5.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
+            this.labelControl5.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.labelControl5.LineVisible = true;
+            this.labelControl5.Location = new System.Drawing.Point(613, 17);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(198, 22);
+            this.labelControl5.TabIndex = 34;
+            this.labelControl5.Text = "THÔNG TIN CHỨC VỤ";
+            // 
+            // txtTenCv
+            // 
+            this.txtTenCv.Location = new System.Drawing.Point(307, 214);
+            this.txtTenCv.Name = "txtTenCv";
+            this.txtTenCv.Size = new System.Drawing.Size(251, 22);
+            this.txtTenCv.TabIndex = 33;
+            // 
+            // txtMacv
+            // 
+            this.txtMacv.Location = new System.Drawing.Point(307, 118);
+            this.txtMacv.Name = "txtMacv";
+            this.txtMacv.Size = new System.Drawing.Size(251, 22);
+            this.txtMacv.TabIndex = 32;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(130, 217);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(80, 17);
+            this.labelControl3.TabIndex = 30;
+            this.labelControl3.Text = "Tên Chức Vụ";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(130, 123);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(74, 17);
+            this.labelControl2.TabIndex = 31;
+            this.labelControl2.Text = "Mã Chức Vụ";
             // 
             // dsChucVu
             // 
@@ -82,77 +173,6 @@
             this.gridView1.GridControl = this.dsChucVu;
             this.gridView1.Name = "gridView1";
             // 
-            // txtTenCv
-            // 
-            this.txtTenCv.Location = new System.Drawing.Point(253, 192);
-            this.txtTenCv.Name = "txtTenCv";
-            this.txtTenCv.Size = new System.Drawing.Size(251, 22);
-            this.txtTenCv.TabIndex = 5;
-            // 
-            // txtMacv
-            // 
-            this.txtMacv.Location = new System.Drawing.Point(253, 96);
-            this.txtMacv.Name = "txtMacv";
-            this.txtMacv.Size = new System.Drawing.Size(167, 22);
-            this.txtMacv.TabIndex = 4;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(709, 167);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 29);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(903, 167);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(94, 29);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(709, 77);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 29);
-            this.btnThem.TabIndex = 3;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(903, 77);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 29);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(76, 208);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(80, 17);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "Tên Chức Vụ";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(76, 101);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 17);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Mã Chức Vụ";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(440, 24);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(53, 17);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Chức Vụ";
-            // 
             // Chucvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -164,10 +184,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsChucVu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenCv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMacv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsChucVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,16 +195,16 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
-        private DevExpress.XtraEditors.SimpleButton btnSua;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.TextEdit txtTenCv;
-        private DevExpress.XtraEditors.TextEdit txtMacv;
         private DevExpress.XtraGrid.GridControl dsChucVu;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton btnxoa;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtTenCv;
+        private DevExpress.XtraEditors.TextEdit txtMacv;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

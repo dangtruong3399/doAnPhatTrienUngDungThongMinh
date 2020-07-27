@@ -9,26 +9,41 @@ namespace DALL_BALL
   public  class ChucVu_DALL_BALL
     {
         QuanLyNhanSuDataContext data = new QuanLyNhanSuDataContext();
-
-        public IQueryable loadcvcombox()
+        TudongTang tt = new TudongTang();
+        public IQueryable<ChucVu> loadcv()
         {
-            var ds = from k in data.ChucVus select new { k.MaCV,k.TenCv};
-            return ds;
+            return data.ChucVus.Select(t => t);
         }
-        public void them1phongcv(string macv, string tencv)
+
+        public string getmaCVauto()
+        {
+
+            string IdMax = data.ChucVus.Max(w => w.MaCV);
+            return "CV0" + tt.laymatudongtang(IdMax, "CV0");
+
+
+        }
+        public bool them1phongcv(string macv, string tencv)
         {
             ChucVu cv = new ChucVu();
             cv.MaCV = macv;
             cv.TenCv = tencv;
             data.ChucVus.InsertOnSubmit(cv);
             data.SubmitChanges();
+            if (cv.MaCV.Length > 0)
+            {
+                return true;
+
+            }
+            else
+                return false;
         }
         public void suacv(string macv, string tencv)
         {
 
-           ChucVu cv = new ChucVu();
-            cv = data.ChucVus.Where(c => c.MaCV == macv).FirstOrDefault();
-
+            ChucVu cv = new ChucVu();
+            cv = data.ChucVus.Where(c => c.MaCV == macv.Trim()).Single();
+            cv.TenCv = tencv;
 
             data.SubmitChanges();
         }

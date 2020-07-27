@@ -22,7 +22,7 @@ namespace DALL_BALL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QlNhanSu")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QlNhanSu2")]
 	public partial class QuanLyNhanSuDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,6 +33,9 @@ namespace DALL_BALL
     partial void InsertChucVu(ChucVu instance);
     partial void UpdateChucVu(ChucVu instance);
     partial void DeleteChucVu(ChucVu instance);
+    partial void InsertctChucVu(ctChucVu instance);
+    partial void UpdatectChucVu(ctChucVu instance);
+    partial void DeletectChucVu(ctChucVu instance);
     partial void InsertHopDong(HopDong instance);
     partial void UpdateHopDong(HopDong instance);
     partial void DeleteHopDong(HopDong instance);
@@ -51,7 +54,7 @@ namespace DALL_BALL
     #endregion
 		
 		public QuanLyNhanSuDataContext() : 
-				base(global::DALL_BALL.Properties.Settings.Default.QlNhanSuConnectionString, mappingSource)
+				base(global::DALL_BALL.Properties.Settings.Default.QlNhanSu2ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -351,6 +354,8 @@ namespace DALL_BALL
 		
 		private string _TenCv;
 		
+		private EntitySet<ctChucVu> _ctChucVus;
+		
 		private EntitySet<HopDong> _HopDongs;
 		
     #region Extensibility Method Definitions
@@ -365,6 +370,7 @@ namespace DALL_BALL
 		
 		public ChucVu()
 		{
+			this._ctChucVus = new EntitySet<ctChucVu>(new Action<ctChucVu>(this.attach_ctChucVus), new Action<ctChucVu>(this.detach_ctChucVus));
 			this._HopDongs = new EntitySet<HopDong>(new Action<HopDong>(this.attach_HopDongs), new Action<HopDong>(this.detach_HopDongs));
 			OnCreated();
 		}
@@ -409,6 +415,19 @@ namespace DALL_BALL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_ctChucVu", Storage="_ctChucVus", ThisKey="MaCV", OtherKey="MaCV")]
+		public EntitySet<ctChucVu> ctChucVus
+		{
+			get
+			{
+				return this._ctChucVus;
+			}
+			set
+			{
+				this._ctChucVus.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_HopDong", Storage="_HopDongs", ThisKey="MaCV", OtherKey="MaCV")]
 		public EntitySet<HopDong> HopDongs
 		{
@@ -442,6 +461,18 @@ namespace DALL_BALL
 			}
 		}
 		
+		private void attach_ctChucVus(ctChucVu entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = this;
+		}
+		
+		private void detach_ctChucVus(ctChucVu entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = null;
+		}
+		
 		private void attach_HopDongs(HopDong entity)
 		{
 			this.SendPropertyChanging();
@@ -456,8 +487,12 @@ namespace DALL_BALL
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ctChucVu")]
-	public partial class ctChucVu
+	public partial class ctChucVu : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Mactcv;
 		
 		private string _MaNhanVien;
 		
@@ -467,13 +502,51 @@ namespace DALL_BALL
 		
 		private System.Nullable<System.DateTime> _NgayKetThuc;
 		
-		private string _LyDo;
+		private EntityRef<ChucVu> _ChucVu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMactcvChanging(string value);
+    partial void OnMactcvChanged();
+    partial void OnMaNhanVienChanging(string value);
+    partial void OnMaNhanVienChanged();
+    partial void OnMaCVChanging(string value);
+    partial void OnMaCVChanged();
+    partial void OnNgayBatDauChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayBatDauChanged();
+    partial void OnNgayKetThucChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayKetThucChanged();
+    #endregion
 		
 		public ctChucVu()
 		{
+			this._ChucVu = default(EntityRef<ChucVu>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(5)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mactcv", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Mactcv
+		{
+			get
+			{
+				return this._Mactcv;
+			}
+			set
+			{
+				if ((this._Mactcv != value))
+				{
+					this.OnMactcvChanging(value);
+					this.SendPropertyChanging();
+					this._Mactcv = value;
+					this.SendPropertyChanged("Mactcv");
+					this.OnMactcvChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
 		public string MaNhanVien
 		{
 			get
@@ -484,12 +557,16 @@ namespace DALL_BALL
 			{
 				if ((this._MaNhanVien != value))
 				{
+					this.OnMaNhanVienChanging(value);
+					this.SendPropertyChanging();
 					this._MaNhanVien = value;
+					this.SendPropertyChanged("MaNhanVien");
+					this.OnMaNhanVienChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="VarChar(5)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
 		public string MaCV
 		{
 			get
@@ -500,7 +577,15 @@ namespace DALL_BALL
 			{
 				if ((this._MaCV != value))
 				{
+					if (this._ChucVu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaCVChanging(value);
+					this.SendPropertyChanging();
 					this._MaCV = value;
+					this.SendPropertyChanged("MaCV");
+					this.OnMaCVChanged();
 				}
 			}
 		}
@@ -516,7 +601,11 @@ namespace DALL_BALL
 			{
 				if ((this._NgayBatDau != value))
 				{
+					this.OnNgayBatDauChanging(value);
+					this.SendPropertyChanging();
 					this._NgayBatDau = value;
+					this.SendPropertyChanged("NgayBatDau");
+					this.OnNgayBatDauChanged();
 				}
 			}
 		}
@@ -532,24 +621,66 @@ namespace DALL_BALL
 			{
 				if ((this._NgayKetThuc != value))
 				{
+					this.OnNgayKetThucChanging(value);
+					this.SendPropertyChanging();
 					this._NgayKetThuc = value;
+					this.SendPropertyChanged("NgayKetThuc");
+					this.OnNgayKetThucChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LyDo", DbType="NVarChar(100)")]
-		public string LyDo
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_ctChucVu", Storage="_ChucVu", ThisKey="MaCV", OtherKey="MaCV", IsForeignKey=true)]
+		public ChucVu ChucVu
 		{
 			get
 			{
-				return this._LyDo;
+				return this._ChucVu.Entity;
 			}
 			set
 			{
-				if ((this._LyDo != value))
+				ChucVu previousValue = this._ChucVu.Entity;
+				if (((previousValue != value) 
+							|| (this._ChucVu.HasLoadedOrAssignedValue == false)))
 				{
-					this._LyDo = value;
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ChucVu.Entity = null;
+						previousValue.ctChucVus.Remove(this);
+					}
+					this._ChucVu.Entity = value;
+					if ((value != null))
+					{
+						value.ctChucVus.Add(this);
+						this._MaCV = value.MaCV;
+					}
+					else
+					{
+						this._MaCV = default(string);
+					}
+					this.SendPropertyChanged("ChucVu");
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -562,9 +693,9 @@ namespace DALL_BALL
 		
 		private string _MaHD;
 		
-		private System.DateTime _NgayVaoLam;
+		private System.Nullable<System.DateTime> _NgayVaoLam;
 		
-		private int _HeSoLuong;
+		private System.Nullable<int> _HeSoLuong;
 		
 		private string _MaCV;
 		
@@ -584,9 +715,9 @@ namespace DALL_BALL
     partial void OnCreated();
     partial void OnMaHDChanging(string value);
     partial void OnMaHDChanged();
-    partial void OnNgayVaoLamChanging(System.DateTime value);
+    partial void OnNgayVaoLamChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayVaoLamChanged();
-    partial void OnHeSoLuongChanging(int value);
+    partial void OnHeSoLuongChanging(System.Nullable<int> value);
     partial void OnHeSoLuongChanged();
     partial void OnMaCVChanging(string value);
     partial void OnMaCVChanged();
@@ -623,8 +754,8 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayVaoLam", DbType="Date NOT NULL")]
-		public System.DateTime NgayVaoLam
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayVaoLam", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayVaoLam
 		{
 			get
 			{
@@ -643,8 +774,8 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HeSoLuong", DbType="Int NOT NULL")]
-		public int HeSoLuong
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HeSoLuong", DbType="Int")]
+		public System.Nullable<int> HeSoLuong
 		{
 			get
 			{
@@ -667,7 +798,7 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="VarChar(5)")]
 		public string MaCV
 		{
 			get
@@ -691,7 +822,7 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPB", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPB", DbType="VarChar(5)")]
 		public string MaPB
 		{
 			get
@@ -789,7 +920,7 @@ namespace DALL_BALL
 					}
 					else
 					{
-						this._HeSoLuong = default(int);
+						this._HeSoLuong = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Luong");
 				}
@@ -1039,8 +1170,6 @@ namespace DALL_BALL
 		
 		private string _TTHonNhan;
 		
-		private EntitySet<Taikhoan> _Taikhoans;
-		
 		private EntityRef<Luong> _Luong;
 		
 		private EntityRef<HopDong> _HopDong;
@@ -1083,7 +1212,6 @@ namespace DALL_BALL
 		
 		public NhanVien()
 		{
-			this._Taikhoans = new EntitySet<Taikhoan>(new Action<Taikhoan>(this.attach_Taikhoans), new Action<Taikhoan>(this.detach_Taikhoans));
 			this._Luong = default(EntityRef<Luong>);
 			this._HopDong = default(EntityRef<HopDong>);
 			this._PhongBan = default(EntityRef<PhongBan>);
@@ -1382,19 +1510,6 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhanVien_Taikhoan", Storage="_Taikhoans", ThisKey="MaNhanVien", OtherKey="MaNhanVien")]
-		public EntitySet<Taikhoan> Taikhoans
-		{
-			get
-			{
-				return this._Taikhoans;
-			}
-			set
-			{
-				this._Taikhoans.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Luong_NhanVien", Storage="_Luong", ThisKey="HeSoLuong", OtherKey="HeSoLuong", IsForeignKey=true)]
 		public Luong Luong
 		{
@@ -1515,18 +1630,6 @@ namespace DALL_BALL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Taikhoans(Taikhoan entity)
-		{
-			this.SendPropertyChanging();
-			entity.NhanVien = this;
-		}
-		
-		private void detach_Taikhoans(Taikhoan entity)
-		{
-			this.SendPropertyChanging();
-			entity.NhanVien = null;
 		}
 	}
 	
@@ -1686,8 +1789,6 @@ namespace DALL_BALL
 		
 		private string _TenQuyenHan;
 		
-		private EntityRef<NhanVien> _NhanVien;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1704,7 +1805,6 @@ namespace DALL_BALL
 		
 		public Taikhoan()
 		{
-			this._NhanVien = default(EntityRef<NhanVien>);
 			OnCreated();
 		}
 		
@@ -1719,10 +1819,6 @@ namespace DALL_BALL
 			{
 				if ((this._MaNhanVien != value))
 				{
-					if (this._NhanVien.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaNhanVienChanging(value);
 					this.SendPropertyChanging();
 					this._MaNhanVien = value;
@@ -1788,40 +1884,6 @@ namespace DALL_BALL
 					this._TenQuyenHan = value;
 					this.SendPropertyChanged("TenQuyenHan");
 					this.OnTenQuyenHanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhanVien_Taikhoan", Storage="_NhanVien", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true)]
-		public NhanVien NhanVien
-		{
-			get
-			{
-				return this._NhanVien.Entity;
-			}
-			set
-			{
-				NhanVien previousValue = this._NhanVien.Entity;
-				if (((previousValue != value) 
-							|| (this._NhanVien.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._NhanVien.Entity = null;
-						previousValue.Taikhoans.Remove(this);
-					}
-					this._NhanVien.Entity = value;
-					if ((value != null))
-					{
-						value.Taikhoans.Add(this);
-						this._MaNhanVien = value.MaNhanVien;
-					}
-					else
-					{
-						this._MaNhanVien = default(string);
-					}
-					this.SendPropertyChanged("NhanVien");
 				}
 			}
 		}

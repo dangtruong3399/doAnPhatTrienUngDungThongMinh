@@ -26,10 +26,20 @@ namespace DALL_BALL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=QlNhanSu;User ID=sa;Password=sa123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DANG-TRUONG;Initial Catalog=QlNhanSu;User ID=sa;Password=sa2012")]
         public string QlNhanSuConnectionString {
             get {
                 return ((string)(this["QlNhanSuConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DANG-TRUONG;Initial Catalog=QlNhanSu2;User ID=sa;Password=sa2012")]
+        public string QlNhanSu2ConnectionString {
+            get {
+                return ((string)(this["QlNhanSu2ConnectionString"]));
             }
         }
     }

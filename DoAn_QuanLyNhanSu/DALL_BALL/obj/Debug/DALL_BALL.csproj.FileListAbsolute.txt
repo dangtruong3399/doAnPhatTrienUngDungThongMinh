@@ -41,10 +41,6 @@ D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BA
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CopyComplete
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.dll
 D:\Lap Trinh HuFi\doantruongx\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.pdb
-D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csprojAssemblyReference.cache
-D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CoreCompileInputs.cache
-D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.dll
-D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.pdb
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\DALL_BALL.dll.config
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\DALL_BALL.dll
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\DALL_BALL.pdb
@@ -84,4 +80,7 @@ D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resou
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CoreCompileInputs.cache
 D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.csproj.CopyComplete
+D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.dll
+D:\DoAn\DoAn_QuanLyNhanSu\DALL_BALL\obj\Debug\DALL_BALL.pdb

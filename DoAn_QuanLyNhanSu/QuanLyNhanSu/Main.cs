@@ -17,9 +17,10 @@ namespace QuanLyNhanSu
         public Main()
         {
             InitializeComponent();
+            DevExpress.LookAndFeel.DefaultLookAndFeel thems = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            thems.LookAndFeel.SkinName = "Xmas 2008 Blue";
 
-            
-           
+
         }
         public void loadfrom(Form frm)
         {
