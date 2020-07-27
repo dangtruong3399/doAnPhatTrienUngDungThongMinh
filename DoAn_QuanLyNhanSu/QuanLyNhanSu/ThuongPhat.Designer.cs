@@ -46,8 +46,8 @@
             this.radioBtnPhat = new System.Windows.Forms.RadioButton();
             this.radioBtnKhenThuong = new System.Windows.Forms.RadioButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.cboxPB = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cboxEdtPhongBan = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -55,13 +55,8 @@
             this.btnXEM = new DevExpress.XtraEditors.SimpleButton();
             this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBandThuongPhat = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.dgvThuongPhat = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -79,15 +74,14 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboxEdtPhongBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongPhat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -267,12 +261,20 @@
             // 
             // panelControl4
             // 
+            this.panelControl4.Controls.Add(this.cboxPB);
             this.panelControl4.Controls.Add(this.labelControl1);
-            this.panelControl4.Controls.Add(this.cboxEdtPhongBan);
             this.panelControl4.Location = new System.Drawing.Point(7, 66);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(328, 41);
             this.panelControl4.TabIndex = 11;
+            // 
+            // cboxPB
+            // 
+            this.cboxPB.FormattingEnabled = true;
+            this.cboxPB.Location = new System.Drawing.Point(171, 14);
+            this.cboxPB.Name = "cboxPB";
+            this.cboxPB.Size = new System.Drawing.Size(136, 21);
+            this.cboxPB.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -283,15 +285,6 @@
             this.labelControl1.Size = new System.Drawing.Size(66, 16);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Phòng Ban";
-            // 
-            // cboxEdtPhongBan
-            // 
-            this.cboxEdtPhongBan.Location = new System.Drawing.Point(133, 14);
-            this.cboxEdtPhongBan.Name = "cboxEdtPhongBan";
-            this.cboxEdtPhongBan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboxEdtPhongBan.Size = new System.Drawing.Size(190, 20);
-            this.cboxEdtPhongBan.TabIndex = 2;
             // 
             // panelControl3
             // 
@@ -355,101 +348,27 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.gridControl1);
+            this.panelControl2.Controls.Add(this.dgvThuongPhat);
             this.panelControl2.Location = new System.Drawing.Point(5, 115);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(768, 373);
             this.panelControl2.TabIndex = 8;
             // 
-            // gridControl1
+            // dgvThuongPhat
             // 
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.bandedGridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(761, 369);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.bandedGridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.dgvThuongPhat.Location = new System.Drawing.Point(2, 2);
+            this.dgvThuongPhat.MainView = this.gridView1;
+            this.dgvThuongPhat.Name = "dgvThuongPhat";
+            this.dgvThuongPhat.Size = new System.Drawing.Size(761, 369);
+            this.dgvThuongPhat.TabIndex = 0;
+            this.dgvThuongPhat.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // bandedGridView1
+            // gridView1
             // 
-            this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBandThuongPhat});
-            this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.bandedGridColumn1,
-            this.bandedGridColumn2,
-            this.bandedGridColumn3,
-            this.bandedGridColumn4});
-            this.bandedGridView1.GridControl = this.gridControl1;
-            this.bandedGridView1.Name = "bandedGridView1";
-            // 
-            // gridBandThuongPhat
-            // 
-            this.gridBandThuongPhat.AppearanceHeader.BackColor = System.Drawing.Color.Pink;
-            this.gridBandThuongPhat.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridBandThuongPhat.AppearanceHeader.BorderColor = System.Drawing.Color.Black;
-            this.gridBandThuongPhat.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBandThuongPhat.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridBandThuongPhat.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBandThuongPhat.AppearanceHeader.Options.UseBorderColor = true;
-            this.gridBandThuongPhat.AppearanceHeader.Options.UseFont = true;
-            this.gridBandThuongPhat.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBandThuongPhat.Caption = "Danh Sách Thưởng Phạt Nhân Viên";
-            this.gridBandThuongPhat.Columns.Add(this.bandedGridColumn1);
-            this.gridBandThuongPhat.Columns.Add(this.bandedGridColumn2);
-            this.gridBandThuongPhat.Columns.Add(this.bandedGridColumn3);
-            this.gridBandThuongPhat.Columns.Add(this.bandedGridColumn4);
-            this.gridBandThuongPhat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridBandThuongPhat.ImageOptions.Image")));
-            this.gridBandThuongPhat.Name = "gridBandThuongPhat";
-            this.gridBandThuongPhat.VisibleIndex = 0;
-            this.gridBandThuongPhat.Width = 661;
-            // 
-            // bandedGridColumn1
-            // 
-            this.bandedGridColumn1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bandedGridColumn1.AppearanceCell.Options.UseFont = true;
-            this.bandedGridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.bandedGridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.bandedGridColumn1.Caption = "Tên Nhân Viên";
-            this.bandedGridColumn1.FieldName = "MaNhanVien";
-            this.bandedGridColumn1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bandedGridColumn1.ImageOptions.Image")));
-            this.bandedGridColumn1.Name = "bandedGridColumn1";
-            this.bandedGridColumn1.Visible = true;
-            this.bandedGridColumn1.Width = 199;
-            // 
-            // bandedGridColumn2
-            // 
-            this.bandedGridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.bandedGridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.bandedGridColumn2.Caption = "Thưởng/Phạt";
-            this.bandedGridColumn2.FieldName = "Loai";
-            this.bandedGridColumn2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bandedGridColumn2.ImageOptions.Image")));
-            this.bandedGridColumn2.Name = "bandedGridColumn2";
-            this.bandedGridColumn2.Visible = true;
-            this.bandedGridColumn2.Width = 183;
-            // 
-            // bandedGridColumn3
-            // 
-            this.bandedGridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.bandedGridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.bandedGridColumn3.Caption = "VND";
-            this.bandedGridColumn3.FieldName = "Tien";
-            this.bandedGridColumn3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bandedGridColumn3.ImageOptions.Image")));
-            this.bandedGridColumn3.Name = "bandedGridColumn3";
-            this.bandedGridColumn3.Visible = true;
-            this.bandedGridColumn3.Width = 135;
-            // 
-            // bandedGridColumn4
-            // 
-            this.bandedGridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.bandedGridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.bandedGridColumn4.Caption = "Lý Do";
-            this.bandedGridColumn4.FieldName = "LyDo";
-            this.bandedGridColumn4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bandedGridColumn4.ImageOptions.Image")));
-            this.bandedGridColumn4.Name = "bandedGridColumn4";
-            this.bandedGridColumn4.Visible = true;
-            this.bandedGridColumn4.Width = 144;
+            this.gridView1.GridControl = this.dgvThuongPhat;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // label1
             // 
@@ -469,6 +388,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "ThuongPhat";
             this.Size = new System.Drawing.Size(1090, 582);
+            this.Load += new System.EventHandler(this.ThuongPhat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -489,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboxEdtPhongBan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
@@ -497,8 +416,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongPhat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -513,16 +432,9 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.ComboBoxEdit cboxEdtPhongBan;
         private DevExpress.XtraEditors.SimpleButton btnXEM;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBandThuongPhat;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn2;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn3;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn4;
+        private DevExpress.XtraGrid.GridControl dgvThuongPhat;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -539,5 +451,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private System.Windows.Forms.RadioButton radioBtnPhat;
         private System.Windows.Forms.RadioButton radioBtnKhenThuong;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.ComboBox cboxPB;
     }
 }

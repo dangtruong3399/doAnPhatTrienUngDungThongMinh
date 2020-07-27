@@ -62,8 +62,10 @@
             this.barBtnItemChamCongPhu = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnItemNhanVienTK = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnItemLichSuLamViec = new DevExpress.XtraBars.BarButtonItem();
+            this.SkinHT = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageChucNangPhu = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -88,11 +90,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 688);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 565);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1200, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1029, 24);
             // 
             // ribbon
             // 
@@ -128,16 +130,17 @@
             this.barBtnItemThoat,
             this.barBtnItemChamCongPhu,
             this.barBtnItemNhanVienTK,
-            this.barBtnItemLichSuLamViec});
+            this.barBtnItemLichSuLamViec,
+            this.SkinHT});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbon.MaxItemId = 35;
+            this.ribbon.MaxItemId = 37;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageHeThong,
             this.ribbonPageQuanLy,
             this.ribbonPageChucNangPhu});
-            this.ribbon.Size = new System.Drawing.Size(1200, 178);
+            this.ribbon.Size = new System.Drawing.Size(1029, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -259,6 +262,7 @@
             this.barBtnItemChamCong.Name = "barBtnItemChamCong";
             this.barBtnItemChamCong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnItemChamCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnItemChamCong_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -286,6 +290,7 @@
             this.barBtnItemBangLuong.Name = "barBtnItemBangLuong";
             this.barBtnItemBangLuong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnItemBangLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnItemBangLuong_ItemClick);
             // 
             // barBtnItemKhenThuong
             // 
@@ -295,6 +300,7 @@
             this.barBtnItemKhenThuong.Name = "barBtnItemKhenThuong";
             this.barBtnItemKhenThuong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnItemKhenThuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnItemKhenThuong_ItemClick);
             // 
             // barBtnItemBaoHiem
             // 
@@ -355,6 +361,7 @@
             this.barBtnItemThoat.Name = "barBtnItemThoat";
             this.barBtnItemThoat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnItemThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnItemThoat_ItemClick);
             // 
             // barBtnItemChamCongPhu
             // 
@@ -386,10 +393,17 @@
             this.barBtnItemLichSuLamViec.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // SkinHT
+            // 
+            this.SkinHT.Caption = "skinRibbonGalleryBarItem1";
+            this.SkinHT.Id = 36;
+            this.SkinHT.Name = "SkinHT";
+            // 
             // ribbonPageHeThong
             // 
             this.ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup5});
             this.ribbonPageHeThong.Name = "ribbonPageHeThong";
             this.ribbonPageHeThong.Text = "Hệ Thống";
             // 
@@ -401,6 +415,12 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.bbarBtnItemDangXuat);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtnItemThoat);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.SkinHT);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Giao diện";
             // 
             // ribbonPageQuanLy
             // 
@@ -452,7 +472,7 @@
             // 
             this.panelControl1.AutoSize = true;
             this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelControl1.Location = new System.Drawing.Point(0, 185);
+            this.panelControl1.Location = new System.Drawing.Point(0, 150);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(4, 4);
@@ -464,7 +484,7 @@
             this.panelControl3.Location = new System.Drawing.Point(2, 2);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(199, 506);
+            this.panelControl3.Size = new System.Drawing.Size(171, 403);
             this.panelControl3.TabIndex = 0;
             this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
             // 
@@ -472,10 +492,10 @@
             // 
             this.panelControl4.Controls.Add(this.xtraTabControl1);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(201, 2);
+            this.panelControl4.Location = new System.Drawing.Point(173, 2);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(997, 506);
+            this.panelControl4.Size = new System.Drawing.Size(854, 403);
             this.panelControl4.TabIndex = 1;
             // 
             // xtraTabControl1
@@ -488,7 +508,7 @@
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(993, 502);
+            this.xtraTabControl1.Size = new System.Drawing.Size(850, 399);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Tag = "";
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
@@ -501,19 +521,19 @@
             this.panelControl2.Controls.Add(this.panelControl4);
             this.panelControl2.Controls.Add(this.panelControl3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 178);
+            this.panelControl2.Location = new System.Drawing.Point(0, 158);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1200, 510);
+            this.panelControl2.Size = new System.Drawing.Size(1029, 407);
             this.panelControl2.TabIndex = 17;
             // 
             // Main
             // 
             this.Appearance.BackColor = System.Drawing.Color.Black;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 725);
+            this.ClientSize = new System.Drawing.Size(1029, 589);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonStatusBar);
@@ -525,6 +545,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "HỆ THỐNG QUẢN LÝ NHÂN SỰ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -585,5 +606,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageChucNangPhu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barBtnItemLichSuLamViec;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem SkinHT;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DALL_BALL;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 namespace QuanLyNhanSu
 {
     public partial class Main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -19,9 +21,17 @@ namespace QuanLyNhanSu
             InitializeComponent();
             DevExpress.LookAndFeel.DefaultLookAndFeel thems = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             thems.LookAndFeel.SkinName = "Xmas 2008 Blue";
-
-
         }
+
+        public void Skins()
+        {
+            DevExpress.UserSkins.BonusSkins.Register();
+
+            DevExpress.UserSkins.OfficeSkins.Register();
+
+            DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(SkinHT, true);
+        }
+
         public void loadfrom(Form frm)
         {
 
@@ -35,8 +45,7 @@ namespace QuanLyNhanSu
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
-         
+            Skins();
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -157,6 +166,75 @@ namespace QuanLyNhanSu
             {
                 tt.AddTab(xtraTabControl1, "", "ChucVu", new Chucvu());
             }
+        }
+
+        private void barBtnItemKhenThuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "ThuongPhat")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "ThuongPhat", new ThuongPhat());
+            }
+        }
+
+        private void barBtnItemChamCong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "ChamCongg")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "ChamCongg", new ChamCongg());
+            }
+        }
+
+        private void barBtnItemBangLuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "BangLuongg")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "BangLuongg", new BangLuongg());
+            }
+        }
+
+        private void barBtnItemThoat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Application.ExitThread();
+            Application.Exit();
         }
     }
 }

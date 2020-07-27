@@ -8,19 +8,32 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DALL_BALL;
 
 namespace QuanLyNhanSu
 {
     public partial class ThuongPhat : DevExpress.XtraEditors.XtraUserControl
     {
+        ThuongPhat_BLL_DAL tp_bll_dal = new ThuongPhat_BLL_DAL();
         public ThuongPhat()
         {
             InitializeComponent();
         }
 
-        private void gridControl1_Click(object sender, EventArgs e)
+        private void ThuongPhat_Load(object sender, EventArgs e)
         {
-
+            loadPhongBan();
+            loadDataGridView_ThuongPhat();
+        }
+        public void loadPhongBan()
+        {
+            cboxPB.DataSource = tp_bll_dal.GetPhongBans();
+            cboxPB.DisplayMember = "TenPB";
+            cboxPB.ValueMember = "MaPB";
+        }
+        public void loadDataGridView_ThuongPhat()
+        {
+            dgvThuongPhat.DataSource = tp_bll_dal.loadDataGridView_ThuongPhat();
         }
     }
 }

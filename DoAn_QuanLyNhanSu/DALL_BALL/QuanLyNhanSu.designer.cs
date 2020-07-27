@@ -30,6 +30,9 @@ namespace DALL_BALL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertTaikhoan(Taikhoan instance);
+    partial void UpdateTaikhoan(Taikhoan instance);
+    partial void DeleteTaikhoan(Taikhoan instance);
     partial void InsertChucVu(ChucVu instance);
     partial void UpdateChucVu(ChucVu instance);
     partial void DeleteChucVu(ChucVu instance);
@@ -48,13 +51,10 @@ namespace DALL_BALL
     partial void InsertPhongBan(PhongBan instance);
     partial void UpdatePhongBan(PhongBan instance);
     partial void DeletePhongBan(PhongBan instance);
-    partial void InsertTaikhoan(Taikhoan instance);
-    partial void UpdateTaikhoan(Taikhoan instance);
-    partial void DeleteTaikhoan(Taikhoan instance);
     #endregion
 		
 		public QuanLyNhanSuDataContext() : 
-				base(global::DALL_BALL.Properties.Settings.Default.QlNhanSu2ConnectionString, mappingSource)
+				base(global::DALL_BALL.Properties.Settings.Default.QlNhanSu2ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -88,6 +88,14 @@ namespace DALL_BALL
 			get
 			{
 				return this.GetTable<BaoHiem>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Taikhoan> Taikhoans
+		{
+			get
+			{
+				return this.GetTable<Taikhoan>();
 			}
 		}
 		
@@ -144,14 +152,6 @@ namespace DALL_BALL
 			get
 			{
 				return this.GetTable<PhongBan>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Taikhoan> Taikhoans
-		{
-			get
-			{
-				return this.GetTable<Taikhoan>();
 			}
 		}
 		
@@ -277,6 +277,140 @@ namespace DALL_BALL
 				{
 					this._NoiCap = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Taikhoan")]
+	public partial class Taikhoan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaNhanVien;
+		
+		private string _TenDangNhap;
+		
+		private string _MatKhau;
+		
+		private string _TenQuyenHan;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaNhanVienChanging(string value);
+    partial void OnMaNhanVienChanged();
+    partial void OnTenDangNhapChanging(string value);
+    partial void OnTenDangNhapChanged();
+    partial void OnMatKhauChanging(string value);
+    partial void OnMatKhauChanged();
+    partial void OnTenQuyenHanChanging(string value);
+    partial void OnTenQuyenHanChanged();
+    #endregion
+		
+		public Taikhoan()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this.OnMaNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._MaNhanVien = value;
+					this.SendPropertyChanged("MaNhanVien");
+					this.OnMaNhanVienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TenDangNhap
+		{
+			get
+			{
+				return this._TenDangNhap;
+			}
+			set
+			{
+				if ((this._TenDangNhap != value))
+				{
+					this.OnTenDangNhapChanging(value);
+					this.SendPropertyChanging();
+					this._TenDangNhap = value;
+					this.SendPropertyChanged("TenDangNhap");
+					this.OnTenDangNhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this.OnMatKhauChanging(value);
+					this.SendPropertyChanging();
+					this._MatKhau = value;
+					this.SendPropertyChanged("MatKhau");
+					this.OnMatKhauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenQuyenHan", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string TenQuyenHan
+		{
+			get
+			{
+				return this._TenQuyenHan;
+			}
+			set
+			{
+				if ((this._TenQuyenHan != value))
+				{
+					this.OnTenQuyenHanChanging(value);
+					this.SendPropertyChanging();
+					this._TenQuyenHan = value;
+					this.SendPropertyChanged("TenQuyenHan");
+					this.OnTenQuyenHanChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -1772,140 +1906,6 @@ namespace DALL_BALL
 		{
 			this.SendPropertyChanging();
 			entity.PhongBan = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Taikhoan")]
-	public partial class Taikhoan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaNhanVien;
-		
-		private string _TenDangNhap;
-		
-		private string _MatKhau;
-		
-		private string _TenQuyenHan;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaNhanVienChanging(string value);
-    partial void OnMaNhanVienChanged();
-    partial void OnTenDangNhapChanging(string value);
-    partial void OnTenDangNhapChanged();
-    partial void OnMatKhauChanging(string value);
-    partial void OnMatKhauChanged();
-    partial void OnTenQuyenHanChanging(string value);
-    partial void OnTenQuyenHanChanged();
-    #endregion
-		
-		public Taikhoan()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string MaNhanVien
-		{
-			get
-			{
-				return this._MaNhanVien;
-			}
-			set
-			{
-				if ((this._MaNhanVien != value))
-				{
-					this.OnMaNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._MaNhanVien = value;
-					this.SendPropertyChanged("MaNhanVien");
-					this.OnMaNhanVienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TenDangNhap
-		{
-			get
-			{
-				return this._TenDangNhap;
-			}
-			set
-			{
-				if ((this._TenDangNhap != value))
-				{
-					this.OnTenDangNhapChanging(value);
-					this.SendPropertyChanging();
-					this._TenDangNhap = value;
-					this.SendPropertyChanged("TenDangNhap");
-					this.OnTenDangNhapChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string MatKhau
-		{
-			get
-			{
-				return this._MatKhau;
-			}
-			set
-			{
-				if ((this._MatKhau != value))
-				{
-					this.OnMatKhauChanging(value);
-					this.SendPropertyChanging();
-					this._MatKhau = value;
-					this.SendPropertyChanged("MatKhau");
-					this.OnMatKhauChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenQuyenHan", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
-		public string TenQuyenHan
-		{
-			get
-			{
-				return this._TenQuyenHan;
-			}
-			set
-			{
-				if ((this._TenQuyenHan != value))
-				{
-					this.OnTenQuyenHanChanging(value);
-					this.SendPropertyChanging();
-					this._TenQuyenHan = value;
-					this.SendPropertyChanged("TenQuyenHan");
-					this.OnTenQuyenHanChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	

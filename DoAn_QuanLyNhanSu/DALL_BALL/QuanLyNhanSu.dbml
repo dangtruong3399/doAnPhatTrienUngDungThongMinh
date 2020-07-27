@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QlNhanSu2" Class="QuanLyNhanSuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DANG-TRUONG;Initial Catalog=QlNhanSu2;User ID=sa" SettingsObjectName="DALL_BALL.Properties.Settings" SettingsPropertyName="QlNhanSu2ConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=khanh-kwx\sqlexpress;Initial Catalog=QlNhanSu2;User ID=sa" SettingsObjectName="DALL_BALL.Properties.Settings" SettingsPropertyName="QlNhanSu2ConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BaoHiem" Member="BaoHiems">
     <Type Name="BaoHiem">
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
@@ -9,6 +9,14 @@
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NoiCap" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="NhanVien_BaoHiem" Member="NhanVien" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Taikhoan" Member="Taikhoans">
+    <Type Name="Taikhoan">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenQuyenHan" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.ChamCong" Member="ChamCongs">
@@ -88,14 +96,6 @@
       <Column Name="TenPB" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Association Name="PhongBan_HopDong" Member="HopDongs" ThisKey="MaPB" OtherKey="MaPB" Type="HopDong" />
       <Association Name="PhongBan_NhanVien" Member="NhanViens" ThisKey="MaPB" OtherKey="MaPB" Type="NhanVien" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Taikhoan" Member="Taikhoans">
-    <Type Name="Taikhoan">
-      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="TenQuyenHan" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.ThuongPhat" Member="ThuongPhats">
