@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyNhanSu", "QuanLyNhanS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALL_BALL", "DALL_BALL\DALL_BALL.csproj", "{F9455403-BF37-497C-99CD-D5E4F83483CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{666E8516-6A45-428F-BD12-F9B19B0ADC99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,22 @@ Global
 		{F9455403-BF37-497C-99CD-D5E4F83483CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F9455403-BF37-497C-99CD-D5E4F83483CF}.Release|x86.ActiveCfg = Release|Any CPU
 		{F9455403-BF37-497C-99CD-D5E4F83483CF}.Release|x86.Build.0 = Release|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Debug|x86.Build.0 = Debug|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Release|x86.ActiveCfg = Release|Any CPU
+		{666E8516-6A45-428F-BD12-F9B19B0ADC99}.Release|x86.Build.0 = Release|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Debug|x86.Build.0 = Debug|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Release|x86.ActiveCfg = Release|Any CPU
+		{0DFEFE6E-227A-43EA-81C2-20BE1E34F448}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

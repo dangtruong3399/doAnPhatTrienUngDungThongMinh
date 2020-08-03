@@ -8,15 +8,18 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
 using System.Net;
+using DALL_BALL;
+using Library;
 
 namespace QuanLyNhanSu
 {
     public partial class frmlogin : DevExpress.XtraEditors.XtraForm
     {
-        //Login_BLL da = new Login_BLL();
+        private NguoiDung_DAL_BLL ndDAL_BLL;
         public frmlogin()
         {
             InitializeComponent();
+            ndDAL_BLL = new NguoiDung_DAL_BLL();
         }
 
         private void frmlogin_Load(object sender, EventArgs e)
@@ -35,36 +38,40 @@ namespace QuanLyNhanSu
 
         }
         #region dang nhap
-        public void Dangnhap()
+        
+
+        public static void hienThiThongBaoLoi(string mess)
         {
+            MessageBox.Show(mess, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
-            if(txtUser.Text==string.Empty)
-            {
-                MessageBox.Show("Không được bỏ trống tên đăng nhập");
-                return;
-            }
-            if(txtPass.Text==string.Empty)
-            {
-                MessageBox.Show("Không được bỏ trống mật khẩu");
-                return;
-            }
-            //if(da.Checklogin(txtUser.Text,txtPass.Text))
-            {
-                MessageBox.Show("Thành Công");
-                Hide();
-             //   main frm = new main();
-               // frm.Show();
-
-            }
-            //else
-            //{
-            //    MessageBox.Show("Mật khẩu hoặc tài khoản sai");
-            //}
+        public static void hienThiThongBaoThanhCong(string mess)
+        {
+            MessageBox.Show(mess, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bt_Dangnhap_Click(object sender, EventArgs e)
         {
-            Dangnhap();
+            
+            string uName = tbTenDangNhap.Text,
+                pass = tbMatKhau.Text;
+            NGUOIDUNG nd = ndDAL_BLL.layNguoiDung(uName);
+            if (nd == null)
+            {
+                hienThiThongBaoLoi("Sai Tên Đăng Nhập!!!");
+                return;
+            }
+
+            if (!nd.PASS.Equals(pass))
+            {
+                hienThiThongBaoLoi("Sai mật khẩu");
+                return;
+            }
+
+            frmMain frmM = new frmMain();
+            this.Hide();
+            frmM.ShowDialog();
+            this.Close();
         }
         #endregion
         
@@ -91,7 +98,7 @@ namespace QuanLyNhanSu
         #endregion
         private void bt_thoat_Click(object sender, EventArgs e)
         {
-         
+            this.Close();
         }
         public void thoat()
         {
@@ -102,30 +109,25 @@ namespace QuanLyNhanSu
 
         }
 
-        private void txtUser_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Dangnhap();
-            }
-        }
-
-        private void txtPass_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Dangnhap();
-            }
-        }
+        
 
         private void pictureEdit4_Click(object sender, EventArgs e)
         {
-          
+            this.Close();
+            
         }
 
         private void txtUser_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienThiMatKhau.Checked)
+                tbMatKhau.PasswordChar = '\0';
+            else
+                tbMatKhau.PasswordChar = '*';
         }
     }
 }

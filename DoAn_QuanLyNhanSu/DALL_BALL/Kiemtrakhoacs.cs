@@ -12,17 +12,17 @@ namespace DALL_BALL
 
 
 
-        public bool kiemtrakhoanv(string manv)
-        {
-            Taikhoan taikhoan = new Taikhoan();
-            taikhoan = data.Taikhoans.Where(m => m.MaNhanVien == manv).FirstOrDefault();
-            if (taikhoan != null)
-            {
-                return true;
-            }
-            else
-                return false;
+        //public bool kiemtrakhoanv(string manv)
+        //{
+        //    Taikhoan taikhoan = new Taikhoan();
+        //    taikhoan = data.Taikhoans.Where(m => m.MaNhanVien == manv).FirstOrDefault();
+        //    if (taikhoan != null)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //        return false;
 
-        }
+        //}
     }
 }

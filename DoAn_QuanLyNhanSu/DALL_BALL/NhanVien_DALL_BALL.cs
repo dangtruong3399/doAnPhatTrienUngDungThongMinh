@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DALL_BALL
 {
-  public  class NhanVien_DALL_BALL
+    public class NhanVien_DALL_BALL
     {
         QuanLyNhanSuDataContext data = new QuanLyNhanSuDataContext();
         TudongTang tt = new TudongTang();
@@ -31,7 +32,7 @@ namespace DALL_BALL
                              NhanViens.TrinhDoHV,
                              NhanViens.DiaChi,
                              NhanViens.Email,
-                             NhanViens.TTHonNhan,                             
+                             NhanViens.TTHonNhan,
                              NhanViens.HeSoLuong,
 
                          };
@@ -43,16 +44,16 @@ namespace DALL_BALL
         {
             NhanVien nv = new NhanVien();
 
-            if (!kt.kiemtrakhoanv(manv))
-            {
+            //if (!kt.kiemtrakhoanv(manv))
+            //{
                 nv = data.NhanViens.Where(m => m.MaNhanVien == manv).FirstOrDefault();
 
                 data.NhanViens.DeleteOnSubmit(nv);
                 data.SubmitChanges();
                 return true;
-            }
-            else
-                return false;
+            //}
+            //else
+            //    return false;
 
 
         }
@@ -130,6 +131,8 @@ namespace DALL_BALL
             var cbo = from hsl in data.Luongs select new { hsl.HeSoLuong };
             return cbo;
         }
+
+
 
         //public bool them1nhanviennew(string manv, string tennv, string pBan, string cVu, string gTinh, string nSinh, string DChi, string soCM, string sdt, string TDo, string Email, string TTHNhan, string NVLam)
         //{

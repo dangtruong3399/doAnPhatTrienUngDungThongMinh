@@ -13,10 +13,10 @@ using DevExpress.Skins;
 using DevExpress.UserSkins;
 namespace QuanLyNhanSu
 {
-    public partial class Main : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         XulyGiaodien tt = new XulyGiaodien();
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
             DevExpress.LookAndFeel.DefaultLookAndFeel thems = new DevExpress.LookAndFeel.DefaultLookAndFeel();
@@ -235,6 +235,152 @@ namespace QuanLyNhanSu
         {
             Application.ExitThread();
             Application.Exit();
+        }
+
+
+        private void barBtnItemQuanLyQuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Quản Lý Quyền")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Quản Lý Quyền", new frmQuanLyQuyen());
+            }
+        }
+
+        private void barButtonItemPhanNhanVienVaoNhomQuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Phân Nhân Viên Vào Nhóm Quyền")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Phân Nhân Viên Vào Nhóm Quyền", new frmPhanNguoiDungVaoNhom());
+            }
+        }
+
+        private void barBtnItemQuanLyNhomQuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Quản Lý Nhóm Quyền")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Quản Lý Nhóm Quyền", new frmQuanLyNhomQuyen());
+            }
+        }
+
+        private void barButtonItemPhanQuyenChoNhom_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Phân Quyền Cho Nhóm")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Phân Quyền Cho Nhóm", new frmPhanQuyenChoNhom());
+            }
+        }
+
+        private void bbarBtnItemDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dangXuat();
+        }
+        public void dangXuat()
+        {
+            DialogResult res =hienThiCauHoiYesNo("Xác nhận đăng xuất?");
+            if (res != DialogResult.Yes)
+                return;
+            Hide();
+            frmlogin frm = new frmlogin();
+            frm.ShowDialog();
+            Close();
+        }
+        public static DialogResult hienThiCauHoiYesNo(string mess)
+        {
+            return MessageBox.Show(mess, "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        private void barBtnItemTaoTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Tạo Tài Khoản")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Tạo Tài Khoản", new frm_QLNguoiDung());
+            }
+        }
+
+        private void barBtnItemBaoHiem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int t = 0;
+            foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+            {
+                if (tab.Text == "Bảo Hiểm")
+                {
+                    xtraTabControl1.SelectedTabPage = tab;
+                    t = 1;
+                }
+            }
+            if (t == 1)
+            {
+
+            }
+            else
+            {
+                tt.AddTab(xtraTabControl1, "", "Bảo Hiểm", new frm_BaoHiem());
+            }
         }
     }
 }

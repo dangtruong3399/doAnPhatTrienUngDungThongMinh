@@ -40,6 +40,10 @@ namespace QuanLyNhanSu
             btnSua.Enabled = true;
             dateNgaySinh.EditValue = DateTime.Now;
             dateNgayVaoLam.EditValue = DateTime.Now;
+            //loadgt();
+            cbogioiTinh.Items.Add("Nam");
+            cbogioiTinh.Items.Add("Nữ");
+            
 
         }
         public void loadnv()
@@ -60,7 +64,7 @@ namespace QuanLyNhanSu
         }
         public void databind()
         {
-            string GioiTinh; 
+            //string GioiTinh; 
 
             txtMaNV.DataBindings.Clear();
             txtMaNV.DataBindings.Add("Text", dsNhanVien.DataSource, "MaNhanVien");
@@ -71,6 +75,8 @@ namespace QuanLyNhanSu
             cboPhongBan.DataBindings.Clear();
             cboPhongBan.DataBindings.Add("Text", dsNhanVien.DataSource, "TenPB");
 
+            cbogioiTinh.DataBindings.Clear();
+            cbogioiTinh.DataBindings.Add("Text",dsNhanVien.DataSource,"GioiTinh");
             //rdNam.DataBindings.Clear();
             //rdNam.DataBindings.Add("Checked", dsNhanVien.DataSource, "GioiTinh");
             //rdNu.DataBindings.Clear();
@@ -99,11 +105,19 @@ namespace QuanLyNhanSu
 
         }
 
+
+        //public void loadgt()
+        //{
+        //    cbogioiTinh.DataSource = nv.loadcbogioiTinh();
+        //    cbogioiTinh.DisplayMember = "GioiTinh";
+        //    cbogioiTinh.ValueMember = "GioiTinh";
+
+        //}
         public void loadpb()
         {
             cboPhongBan.DataSource = pb.loadphongbancombox();
             cboPhongBan.DisplayMember = "TenPB";
-            cboPhongBan.ValueMember = "MaPb";
+            cboPhongBan.ValueMember = "MaPB";
         }
         public void loadcv()
         {
@@ -172,11 +186,14 @@ namespace QuanLyNhanSu
             string tinhtranghonnhan = txtTTHN.Text;
             DateTime ngaysinh = DateTime.Parse(dateNgaySinh.EditValue.ToString());
             DateTime ngayvaolam = DateTime.Parse(dateNgayVaoLam.EditValue.ToString());
-            if (rdNam.Checked)
-                gioitinh = "Nam";
-            else
-                gioitinh = "Nữ";
+            //if (rdNam.Checked)
+            //    gioitinh = "Nam";
+            //else
+            //    gioitinh = "Nữ";
             string hinh = "Hinh" + txtTenNV.Text;
+            cbogioiTinh.SelectedItem.ToString(); ;
+            //cbogioiTinh.Items.Add("Nữ");
+            
 
             if (add)
             {
@@ -301,6 +318,31 @@ namespace QuanLyNhanSu
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             NhanVien_Load(sender, e);
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            foreach (int i in gridView1.GetSelectedRows())
+            {
+                DataRow row = gridView1.GetDataRow(i);
+                if (row==null)
+                {
+                    return;
+                }
+                MessageBox.Show(row[0].ToString());
+            }
+            //int[] index = gridView1.GetSelectedRows();
+            //DataRow dr = gridView1.GetDataRow(0);
+            //if (dr==null)
+            //{
+            //    return;
+            //}
+            //if (dr["GioiTinh"].ToString() == "Nam")
+            //{
+            //    rdNam.Checked = true;
+            //}
+            //else
+            //    rdNu.Checked = true;
         }
 
         public void resetvalues()

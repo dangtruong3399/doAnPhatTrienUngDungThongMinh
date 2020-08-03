@@ -133,7 +133,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(108, 30);
             this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoa";
+            this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
@@ -145,7 +145,7 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(140, 30);
             this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Luu";
+            this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
@@ -156,7 +156,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(108, 30);
             this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "Sua";
+            this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
@@ -167,7 +167,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 30);
             this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Them";
+            this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // txtTenPb
