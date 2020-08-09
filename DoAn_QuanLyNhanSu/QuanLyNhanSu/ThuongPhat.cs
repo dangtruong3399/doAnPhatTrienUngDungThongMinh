@@ -14,7 +14,7 @@ namespace QuanLyNhanSu
 {
     public partial class ThuongPhat : DevExpress.XtraEditors.XtraUserControl
     {
-        ThuongPhat_BLL_DAL tp_bll_dal = new ThuongPhat_BLL_DAL();
+        ThuongPhat_DAL_BLL tp_bll_dal = new ThuongPhat_DAL_BLL();
         public ThuongPhat()
         {
             InitializeComponent();

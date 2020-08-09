@@ -127,7 +127,7 @@ namespace QuanLyNhanSu
             int t = 0;
             foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
             {
-                if (tab.Text == "NhanVien")
+                if (tab.Text == "Nhân Viên")
                 {
                     xtraTabControl1.SelectedTabPage = tab;
                     t = 1;
@@ -139,7 +139,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "NhanVien", new NhanVien());
+                tt.AddTab(xtraTabControl1, "", "Nhân Viên", new NhanVien1());
             }
 
         }
@@ -152,7 +152,7 @@ namespace QuanLyNhanSu
             int t = 0;
             foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
             {
-                if (tab.Text == "ChucVu")
+                if (tab.Text == "Chức Vụ")
                 {
                     xtraTabControl1.SelectedTabPage = tab;
                     t = 1;
@@ -164,7 +164,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "ChucVu", new Chucvu());
+                tt.AddTab(xtraTabControl1, "", "Chức Vụ", new Chucvu());
             }
         }
 
@@ -255,7 +255,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Quản Lý Quyền", new frmQuanLyQuyen());
+                tt.AddTab(xtraTabControl1, "", "Quản Lý Quyền", new QuanLyQuyen());
             }
         }
 
@@ -276,7 +276,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Phân Nhân Viên Vào Nhóm Quyền", new frmPhanNguoiDungVaoNhom());
+                tt.AddTab(xtraTabControl1, "", "Phân Nhân Viên Vào Nhóm Quyền", new PhanNguoiDungVaoNhom());
             }
         }
 
@@ -297,7 +297,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Quản Lý Nhóm Quyền", new frmQuanLyNhomQuyen());
+                tt.AddTab(xtraTabControl1, "", "Quản Lý Nhóm Quyền", new QuanLyNhomQuyen());
             }
         }
 
@@ -318,7 +318,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Phân Quyền Cho Nhóm", new frmPhanQuyenChoNhom());
+                tt.AddTab(xtraTabControl1, "", "Phân Quyền Cho Nhóm", new PhanQuyenChoNhom());
             }
         }
 
@@ -358,7 +358,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Tạo Tài Khoản", new frm_QLNguoiDung());
+                tt.AddTab(xtraTabControl1, "", "Tạo Tài Khoản", new QLNguoiDung());
             }
         }
 
@@ -379,7 +379,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Bảo Hiểm", new frm_BaoHiem());
+                tt.AddTab(xtraTabControl1, "", "Bảo Hiểm", new BaoHiem());
             }
         }
     }

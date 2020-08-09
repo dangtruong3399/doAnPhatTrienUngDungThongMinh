@@ -111,27 +111,27 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl5.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl5.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.labelControl5.LineVisible = true;
-            this.labelControl5.Location = new System.Drawing.Point(299, 53);
+            this.labelControl5.Location = new System.Drawing.Point(359, 44);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(224, 22);
+            this.labelControl5.Size = new System.Drawing.Size(388, 38);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "THÔNG TIN PHÒNG BAN";
             // 
             // btnXoa
             // 
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(573, 222);
+            this.btnXoa.Location = new System.Drawing.Point(644, 269);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(108, 30);
+            this.btnXoa.Size = new System.Drawing.Size(109, 41);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -140,10 +140,10 @@
             // 
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLuu.Location = new System.Drawing.Point(391, 222);
+            this.btnLuu.Location = new System.Drawing.Point(462, 269);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(140, 30);
+            this.btnLuu.Size = new System.Drawing.Size(110, 41);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -151,10 +151,10 @@
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(220, 222);
+            this.btnSua.Location = new System.Drawing.Point(291, 269);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(108, 30);
+            this.btnSua.Size = new System.Drawing.Size(109, 41);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
@@ -162,17 +162,17 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(55, 222);
+            this.btnThem.Location = new System.Drawing.Point(126, 269);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(108, 30);
+            this.btnThem.Size = new System.Drawing.Size(109, 41);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // txtTenPb
             // 
-            this.txtTenPb.Location = new System.Drawing.Point(180, 146);
+            this.txtTenPb.Location = new System.Drawing.Point(251, 193);
             this.txtTenPb.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtTenPb.Name = "txtTenPb";
             this.txtTenPb.Size = new System.Drawing.Size(320, 22);
@@ -180,7 +180,7 @@
             // 
             // txtMapb
             // 
-            this.txtMapb.Location = new System.Drawing.Point(180, 93);
+            this.txtMapb.Location = new System.Drawing.Point(251, 140);
             this.txtMapb.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtMapb.Name = "txtMapb";
             this.txtMapb.Size = new System.Drawing.Size(320, 22);
@@ -188,37 +188,45 @@
             // 
             // lbSoNV
             // 
-            this.lbSoNV.Location = new System.Drawing.Point(667, 96);
+            this.lbSoNV.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbSoNV.Appearance.Options.UseFont = true;
+            this.lbSoNV.Location = new System.Drawing.Point(762, 143);
             this.lbSoNV.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lbSoNV.Name = "lbSoNV";
-            this.lbSoNV.Size = new System.Drawing.Size(31, 16);
+            this.lbSoNV.Size = new System.Drawing.Size(44, 22);
             this.lbSoNV.TabIndex = 0;
             this.lbSoNV.Text = "count";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(561, 96);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(609, 142);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(86, 17);
+            this.labelControl4.Size = new System.Drawing.Size(121, 23);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Số Nhân Viên:";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(37, 96);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(98, 139);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(81, 16);
+            this.labelControl3.Size = new System.Drawing.Size(114, 22);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Mã phòng ban";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(37, 150);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(98, 193);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(86, 16);
+            this.labelControl2.Size = new System.Drawing.Size(122, 22);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Tên Phòng Ban";
             // 

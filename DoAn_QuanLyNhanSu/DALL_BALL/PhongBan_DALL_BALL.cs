@@ -13,11 +13,7 @@ namespace DALL_BALL
 
         TudongTang tt = new TudongTang();
         QuanLyNhanSuDataContext data = new QuanLyNhanSuDataContext();
-        //PhongBanTableAdapter data1 = new PhongBanTableAdapter();
-        //public DataTable loadPhongBanall()
-        //{
-        //   return  data1.GetPhongBan();
-        //   }
+        
         public IQueryable loadphongban()
         {
             var ds = from PhongBans in data.PhongBans

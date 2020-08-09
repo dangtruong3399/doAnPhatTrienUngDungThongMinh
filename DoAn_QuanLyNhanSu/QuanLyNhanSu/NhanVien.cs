@@ -9,22 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DALL_BALL;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyNhanSu
 {
-    public partial class NhanVien : UserControl
+    public partial class NhanVien1 : UserControl
     {
         bool add, update;
-        public NhanVien()
+        public NhanVien1()
         {
             InitializeComponent();
         }
 
-        NhanVien_DALL_BALL nv = new NhanVien_DALL_BALL();
+        NhanVien_DAL_BLL nv = new NhanVien_DAL_BLL();
         PhongBan_DALL_BALL pb = new PhongBan_DALL_BALL();
-        ChucVu_DALL_BALL cv = new ChucVu_DALL_BALL();
-        HopDong_DALL_BALL hd = new HopDong_DALL_BALL();
-        Chitietcv_DALL_BALL ctcv = new Chitietcv_DALL_BALL();
+        ChucVu_DAL_BLL cv = new ChucVu_DAL_BLL();
+        HopDong_DAL_BLL hd = new HopDong_DAL_BLL();
+        Chitietcv_DAL_BLL ctcv = new Chitietcv_DAL_BLL();
+        BaoHiem_DAL_BLL bh = new BaoHiem_DAL_BLL();
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
@@ -41,8 +43,7 @@ namespace QuanLyNhanSu
             dateNgaySinh.EditValue = DateTime.Now;
             dateNgayVaoLam.EditValue = DateTime.Now;
             //loadgt();
-            cbogioiTinh.Items.Add("Nam");
-            cbogioiTinh.Items.Add("Nữ");
+           
             
 
         }
@@ -74,14 +75,7 @@ namespace QuanLyNhanSu
             cboChucVu.DataBindings.Add("Text", dsNhanVien.DataSource, "Tencv");
             cboPhongBan.DataBindings.Clear();
             cboPhongBan.DataBindings.Add("Text", dsNhanVien.DataSource, "TenPB");
-
-            cbogioiTinh.DataBindings.Clear();
-            cbogioiTinh.DataBindings.Add("Text",dsNhanVien.DataSource,"GioiTinh");
-            //rdNam.DataBindings.Clear();
-            //rdNam.DataBindings.Add("Checked", dsNhanVien.DataSource, "GioiTinh");
-            //rdNu.DataBindings.Clear();
-            //rdNu.DataBindings.Add("Checked", dsNhanVien.DataSource, "GioiTinh");
-
+            
             dateNgaySinh.DataBindings.Clear();
             dateNgaySinh.DataBindings.Add("Text",dsNhanVien.DataSource,"NgaySinh");
             txtDiaChi.DataBindings.Clear();
@@ -106,13 +100,7 @@ namespace QuanLyNhanSu
         }
 
 
-        //public void loadgt()
-        //{
-        //    cbogioiTinh.DataSource = nv.loadcbogioiTinh();
-        //    cbogioiTinh.DisplayMember = "GioiTinh";
-        //    cbogioiTinh.ValueMember = "GioiTinh";
-
-        //}
+       
         public void loadpb()
         {
             cboPhongBan.DataSource = pb.loadphongbancombox();
@@ -182,42 +170,22 @@ namespace QuanLyNhanSu
             string diachi = txtDiaChi.Text;
             string email = txtEmail.Text;
             string gioitinh = "";
-            // string tinhtranhn = txtTTHN.Text;
+            string tinhtranhn = txtTTHN.Text;
             string tinhtranghonnhan = txtTTHN.Text;
             DateTime ngaysinh = DateTime.Parse(dateNgaySinh.EditValue.ToString());
             DateTime ngayvaolam = DateTime.Parse(dateNgayVaoLam.EditValue.ToString());
-            //if (rdNam.Checked)
-            //    gioitinh = "Nam";
-            //else
-            //    gioitinh = "Nữ";
+            if (rdNam.Checked)
+                gioitinh = "Nam";
+            else
+                gioitinh = "Nữ";
             string hinh = "Hinh" + txtTenNV.Text;
-            cbogioiTinh.SelectedItem.ToString(); ;
-            //cbogioiTinh.Items.Add("Nữ");
+           
+           
             
 
             if (add)
             {
-
-                //string manv = txtMaNV.Text.Trim();
-                //string tennv = txtTenNV.Text.Trim();
-                //string mapb = cboPhongBan.SelectedValue.ToString();
-                //string macv = cboChucVu.SelectedValue.ToString();
-                //int hesoluong = int.Parse(cboHeSoLuong.SelectedValue.ToString());
-                //string dienthoai = txtDienThoai.Text;
-                //string socm = txtSoCM.Text;
-                //string diachi = txtDiaChi.Text;
-                //string email = txtEmail.Text;
-                //string gioitinh = "";
-                //string tinhtranhn = txtTTHN.Text;
-                //string tinhtranghonnhan = txtTTHN.Text;
-                //DateTime ngaysinh = DateTime.Parse(dateNgaySinh.EditValue.ToString());
-                //DateTime ngayvaolam = DateTime.Parse(dateNgaySinh.EditValue.ToString());
-                //if (rdNam.Checked)
-                //    gioitinh = "Nam";
-                //else
-                //    gioitinh = "Nữ";
-                //string hinh = "Hinh" + txtTenNV.Text;
-
+               
                 // them  1 hopdong
                 hd.them1hopdong("", ngayvaolam, hesoluong, macv, mapb);
 
@@ -248,12 +216,6 @@ namespace QuanLyNhanSu
                 nv.sua1nhanvien(manv, mapb, tennv, gioitinh, ngaysinh, socm, dienthoai,
                    txtTrinhDo.Text, diachi, email, hinh, tinhtranghonnhan, hesoluong);
 
-
-                //if(ngayvaolam!=ngayvaolam2)
-                //{
-
-                //}
-
                 string mh1 = hd.mahdtheonhanvien(manv);
                 hd.sua1hopdong(mh1, ngayvaolam, hesoluong, macv, mapb);
 
@@ -261,36 +223,18 @@ namespace QuanLyNhanSu
 
                 ctcv.sua1chitietcv(ctcv1, macv, ngayvaolam);
 
-
-
-                //if(macv!=macv2 && mapb==mapb2) // cv giống nhau macv==macv2 -> sua 
-                // {
-                //     //  lấy mã cv ban đầu để sữa
-                //     if(macv==macv2)
-                //     ctcv.sua1chitietcv(manv, macv2, ngayvaolam); // sửa cv cầm theo cv cũ đưa vào
-
-                //     ctcv.them1chitietcv(manv, macv,DateTime.Now, "Thay Đổi Chức Vụ");
-                // }
-                //else if(macv==macv2 && mapb!=mapb2)
-                // {
-
-                //     ctcv.sua1chitietcv(manv, macv, ngayvaolam);
-                //     ctcv.them1chitietcv(manv, macv2, DateTime.Now, "Chuyển phòng ban");
-                // }
-                //else if(macv!=macv2 && mapb!=mapb2)
-                // {
-
-                //     ctcv.sua1chitietcv(manv, macv, ngayvaolam);
-                //     ctcv.them1chitietcv(manv, macv2, DateTime.Now, "Chuyển chức vụ, Thay đổi chức vụ");
-                // }
-
-
-
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            ctcv.xoa1chitietcv(txtMaNV.Text);
+            nv.xoachamcong(txtMaNV.Text);
+            nv.xoatinhluong(txtMaNV.Text);
+            nv.xoathuongphat(txtMaNV.Text);
+            bh.xoa1baohiem(txtMaNV.Text);
+
+
             bool kq = nv.xoanhanvien(txtMaNV.Text);
             if (kq)
 
@@ -322,27 +266,95 @@ namespace QuanLyNhanSu
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            foreach (int i in gridView1.GetSelectedRows())
+            
+            string gioitinh = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "GioiTinh").ToString();
+            if (gioitinh == "Nam")
             {
-                DataRow row = gridView1.GetDataRow(i);
-                if (row==null)
-                {
-                    return;
-                }
-                MessageBox.Show(row[0].ToString());
+                rdNam.Checked = true;
+
             }
-            //int[] index = gridView1.GetSelectedRows();
-            //DataRow dr = gridView1.GetDataRow(0);
-            //if (dr==null)
-            //{
-            //    return;
-            //}
-            //if (dr["GioiTinh"].ToString() == "Nam")
-            //{
-            //    rdNam.Checked = true;
-            //}
-            //else
-            //    rdNu.Checked = true;
+            else
+            {
+                rdNu.Checked = true;
+
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.Application application = new Excel.Application();
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+
+
+
+            workbook = application.Workbooks.Add(Type.Missing);
+            application.Visible = true;
+            application.WindowState = Excel.XlWindowState.xlMaximized;
+            //getdatabase   
+            workbook.Worksheets.Add();
+            worksheet = workbook.Sheets[1];
+            worksheet.Cells[1, 1] = "Dach sách nhân viên";
+            worksheet.Cells[3, 1] = "STT";
+            worksheet.Cells[3, 2] = "Mã nhân viên";
+            worksheet.Cells[3, 3] = "Tên Nhân Viên";
+            worksheet.Cells[3, 4] = "Giới Tính";
+            worksheet.Cells[3, 5] = "Ngày Sinh";
+            worksheet.Cells[3, 6] = "Trình Độ";
+            worksheet.Cells[3, 7] = "TT Hôn Nhân";
+            worksheet.Cells[3, 8] = "Phòng Ban";
+
+            /// int j = 1;
+            List<NhanVien>lst = new List<NhanVien>();
+            lst = nv.dsnhanvien();
+            for (int i = 0; i < lst.Count; i++)
+            {
+
+
+                worksheet.Cells[i + 4, 1] = i + 1;
+                worksheet.Cells[i + 4, 2] = lst[i].MaNhanVien;
+                worksheet.Cells[i + 4, 3] = lst[i].TenNV;
+                worksheet.Cells[i + 4, 4] = lst[i].GioiTinh;
+                worksheet.Cells[i + 4, 5] = lst[i].NgaySinh;
+                worksheet.Cells[i + 4, 6] = lst[i].TrinhDoHV;
+                worksheet.Cells[i + 4, 7] = lst[i].TTHonNhan;
+                worksheet.Cells[i + 4, 8] = lst[i].PhongBan.TenPB;
+
+            }
+
+            // định dạng trang
+            worksheet.PageSetup.Orientation = Excel.XlPageOrientation.xlPortrait;
+            worksheet.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+            worksheet.PageSetup.LeftMargin = 0;
+            worksheet.PageSetup.RightMargin = 0;
+            worksheet.PageSetup.BottomMargin = 0;
+            worksheet.PageSetup.TopMargin = 0;
+
+            //định dạng cột
+            //worksheet.Range["A1"].ColumnWidth = 5;
+            //worksheet.Range["B1"].ColumnWidth = 15;
+            //worksheet.Range["C1"].ColumnWidth = 30;
+            //worksheet.Range["D1"].ColumnWidth = 10;
+            //worksheet.Range["E1"].ColumnWidth = 20;
+            //worksheet.Range["F1"].ColumnWidth = 30;
+            //worksheet.Range["G1"].ColumnWidth = 30;
+            //worksheet.Range["H1"].ColumnWidth = 30;
+
+
+
+
+            worksheet.Range["A1", "G100"].Font.Name = "Times New Roman";
+            worksheet.Range["A1", "E100"].Font.Size = 12;
+            worksheet.Range["A1", "H1"].MergeCells = true;
+            worksheet.Range["A1", "K3"].Font.Bold = true;
+           
+            // kẻ bảng nhân viên
+            worksheet.Range["A3", "H" + (lst.Count + 3)].Borders.LineStyle = 1;
+            // định dạng các dòng
+            worksheet.Range["A1", "G1"].HorizontalAlignment = 3;
+            worksheet.Range["A3", "K3"].HorizontalAlignment = 3;
+            worksheet.Range["A4", "K" + (lst.Count - 1 + 4)].HorizontalAlignment = 3;
+            worksheet.Columns.AutoFit();
         }
 
         public void resetvalues()
@@ -356,5 +368,6 @@ namespace QuanLyNhanSu
             txtDienThoai.Text = "";
 
         }
+
     }
 }

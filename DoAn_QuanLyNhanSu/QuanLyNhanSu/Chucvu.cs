@@ -16,7 +16,7 @@ namespace QuanLyNhanSu
     public partial class Chucvu : DevExpress.XtraEditors.XtraUserControl
     {
         bool add, update = false;
-        ChucVu_DALL_BALL cv = new ChucVu_DALL_BALL();
+        ChucVu_DAL_BLL cv = new ChucVu_DAL_BLL();
         TudongTang tt = new TudongTang();
         public Chucvu()
         {

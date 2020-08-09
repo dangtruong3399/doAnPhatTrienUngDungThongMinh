@@ -69,23 +69,23 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnxoa.Location = new System.Drawing.Point(953, 204);
+            this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.ImageOptions.Image")));
+            this.btnxoa.Location = new System.Drawing.Point(1060, 200);
             this.btnxoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(115, 30);
+            this.btnxoa.Size = new System.Drawing.Size(128, 39);
             this.btnxoa.TabIndex = 36;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLuu.Location = new System.Drawing.Point(953, 110);
+            this.btnLuu.Location = new System.Drawing.Point(1060, 106);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(115, 30);
+            this.btnLuu.Size = new System.Drawing.Size(128, 45);
             this.btnLuu.TabIndex = 37;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -93,10 +93,10 @@
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(752, 204);
+            this.btnSua.Location = new System.Drawing.Point(859, 200);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(108, 30);
+            this.btnSua.Size = new System.Drawing.Size(134, 39);
             this.btnSua.TabIndex = 38;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -104,56 +104,60 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(752, 110);
+            this.btnThem.Location = new System.Drawing.Point(859, 106);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(108, 30);
+            this.btnThem.Size = new System.Drawing.Size(134, 45);
             this.btnThem.TabIndex = 35;
             this.btnThem.Text = "Thêm";
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl5.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl5.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.labelControl5.LineVisible = true;
-            this.labelControl5.Location = new System.Drawing.Point(613, 17);
+            this.labelControl5.Location = new System.Drawing.Point(682, 17);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(198, 22);
+            this.labelControl5.Size = new System.Drawing.Size(340, 38);
             this.labelControl5.TabIndex = 34;
             this.labelControl5.Text = "THÔNG TIN CHỨC VỤ";
             // 
             // txtTenCv
             // 
-            this.txtTenCv.Location = new System.Drawing.Point(307, 214);
+            this.txtTenCv.Location = new System.Drawing.Point(434, 197);
             this.txtTenCv.Name = "txtTenCv";
             this.txtTenCv.Size = new System.Drawing.Size(251, 22);
             this.txtTenCv.TabIndex = 33;
             // 
             // txtMacv
             // 
-            this.txtMacv.Location = new System.Drawing.Point(307, 118);
+            this.txtMacv.Location = new System.Drawing.Point(434, 118);
             this.txtMacv.Name = "txtMacv";
             this.txtMacv.Size = new System.Drawing.Size(251, 22);
             this.txtMacv.TabIndex = 32;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(130, 217);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(260, 196);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(80, 17);
+            this.labelControl3.Size = new System.Drawing.Size(109, 23);
             this.labelControl3.TabIndex = 30;
             this.labelControl3.Text = "Tên Chức Vụ";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(130, 123);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(267, 116);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 17);
+            this.labelControl2.Size = new System.Drawing.Size(102, 23);
             this.labelControl2.TabIndex = 31;
             this.labelControl2.Text = "Mã Chức Vụ";
             // 

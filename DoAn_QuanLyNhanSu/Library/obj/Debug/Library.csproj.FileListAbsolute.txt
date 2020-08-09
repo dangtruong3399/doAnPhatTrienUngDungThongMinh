@@ -1,6 +1,5 @@
 D:\DoAn\DoAn_QuanLyNhanSu\Library\bin\Debug\Library.dll
 D:\DoAn\DoAn_QuanLyNhanSu\Library\bin\Debug\Library.pdb
-D:\DoAn\DoAn_QuanLyNhanSu\Library\obj\Debug\Library.csprojAssemblyReference.cache
 D:\DoAn\DoAn_QuanLyNhanSu\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
 D:\DoAn\DoAn_QuanLyNhanSu\Library\obj\Debug\Library.dll
 D:\DoAn\DoAn_QuanLyNhanSu\Library\obj\Debug\Library.pdb

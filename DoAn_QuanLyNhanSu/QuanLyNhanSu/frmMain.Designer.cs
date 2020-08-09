@@ -77,18 +77,18 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonStatusBar
@@ -515,24 +515,14 @@
             this.panelControl1.Size = new System.Drawing.Size(4, 4);
             this.panelControl1.TabIndex = 16;
             // 
-            // panelControl3
-            // 
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(2, 2);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(199, 506);
-            this.panelControl3.TabIndex = 0;
-            this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
-            // 
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.xtraTabControl1);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(201, 2);
+            this.panelControl4.Location = new System.Drawing.Point(226, 2);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(997, 506);
+            this.panelControl4.Size = new System.Drawing.Size(972, 506);
             this.panelControl4.TabIndex = 1;
             // 
             // xtraTabControl1
@@ -545,7 +535,7 @@
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(993, 502);
+            this.xtraTabControl1.Size = new System.Drawing.Size(968, 502);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Tag = "";
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
@@ -563,6 +553,16 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1200, 510);
             this.panelControl2.TabIndex = 17;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl3.Location = new System.Drawing.Point(2, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(224, 506);
+            this.panelControl3.TabIndex = 0;
+            this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
             // 
             // frmMain
             // 
@@ -586,12 +586,12 @@
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,7 +628,6 @@
         private DevExpress.XtraBars.BarButtonItem barBtnItemBangLuong;
         private DevExpress.XtraBars.BarButtonItem barBtnItemKhenThuong;
         private DevExpress.XtraBars.BarButtonItem barBtnItemBaoHiem;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
@@ -648,5 +647,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhanNhanVienVaoNhomQuyen;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhanQuyenChoNhom;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
     }
 }
