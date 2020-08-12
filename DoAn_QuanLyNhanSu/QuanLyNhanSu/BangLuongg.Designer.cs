@@ -59,6 +59,7 @@
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,6 +75,7 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.Controls.Add(this.btnExcel);
             this.groupControl1.Controls.Add(this.lbMaNV);
             this.groupControl1.Controls.Add(this.lbTenNV);
             this.groupControl1.Controls.Add(this.labelControl8);
@@ -369,6 +371,16 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "BẢNG LƯƠNG CÔNG NHÂN VIÊN CHỨC";
             // 
+            // btnExcel
+            // 
+            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
+            this.btnExcel.Location = new System.Drawing.Point(1058, 336);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(112, 35);
+            this.btnExcel.TabIndex = 102;
+            this.btnExcel.Text = "Xuất File";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // BangLuongg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -425,5 +437,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnExcel;
     }
 }

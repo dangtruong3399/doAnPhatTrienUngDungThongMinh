@@ -163,11 +163,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThuongPhat.cs">
+    <Compile Include="ThuongPhatt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThuongPhat.Designer.cs">
-      <DependentUpon>ThuongPhat.cs</DependentUpon>
+    <Compile Include="ThuongPhatt.Designer.cs">
+      <DependentUpon>ThuongPhatt.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BangLuongg.resx">
       <DependentUpon>BangLuongg.cs</DependentUpon>
@@ -221,8 +221,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThuongPhat.resx">
-      <DependentUpon>ThuongPhat.cs</DependentUpon>
+    <EmbeddedResource Include="ThuongPhatt.resx">
+      <DependentUpon>ThuongPhatt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

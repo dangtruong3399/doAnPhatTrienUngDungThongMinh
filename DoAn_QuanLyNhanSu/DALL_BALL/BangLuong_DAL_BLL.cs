@@ -10,6 +10,11 @@ namespace DALL_BALL
     {
         QuanLyNhanSuDataContext db = new QuanLyNhanSuDataContext();
         public BangLuong_DAL_BLL() { }
+
+        public List<TinhLuong> dstinhluong()
+        {
+            return db.TinhLuongs.ToList();
+        }
         public IQueryable<Luong> GetLuongs()
         {
             return db.Luongs;

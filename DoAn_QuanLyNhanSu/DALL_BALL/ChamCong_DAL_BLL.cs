@@ -11,12 +11,20 @@ namespace DALL_BALL
         QuanLyNhanSuDataContext db = new QuanLyNhanSuDataContext();
         public ChamCong_DAL_BLL() { }
 
+        public List<ChamCong> dsChamCong()
+        {
+            return db.ChamCongs.ToList();
+        }
+
         public IQueryable layDSChamCong()
         {
             var result = from cc in db.ChamCongs
+                         join nv in db.NhanViens on cc.MaNhanVien equals nv.MaNhanVien
                          select new
                          {
+                             
                              cc.MaNhanVien,
+                             nv.TenNV,
                              cc.Ngay,
                              cc.TinhTrang
                          };

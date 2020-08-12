@@ -507,7 +507,6 @@ D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Chucvu.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmlogin.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.PhongBan.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.ThuongPhat.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe.licenses
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
@@ -527,3 +526,4 @@ D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.BaoHiem.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.QLNguoiDung.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.NhanVien1.resources
 D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.QuanLyNhomQuyen.resources
+D:\DoAn\DoAn_QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.ThuongPhatt.resources

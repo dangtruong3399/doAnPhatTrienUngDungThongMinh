@@ -22,6 +22,12 @@ namespace DALL_BALL
         {
             return db.PhongBans;
         }
+
+        public List<ThuongPhat> dsThuongPhat()
+        {
+            
+            return db.ThuongPhats.ToList();
+        }
         public IQueryable loadDataGridView_ThuongPhat()
         {
             var result = from nv in db.NhanViens
@@ -30,13 +36,15 @@ namespace DALL_BALL
                          select new
                          {
                              tp.MaThuongPhat,
-                             pb.TenPB,
+                            
+                             nv.MaNhanVien,
                              nv.TenNV,
+                             pb.TenPB,
                              tp.Loai,
                              tp.Tien,
                              tp.LyDo,
                              tp.Ngay,
-                             nv.MaNhanVien
+                             
                          };
             return result;
         }

@@ -185,7 +185,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "ThuongPhat", new ThuongPhat());
+                tt.AddTab(xtraTabControl1, "", "ThuongPhat", new ThuongPhatt());
             }
         }
 

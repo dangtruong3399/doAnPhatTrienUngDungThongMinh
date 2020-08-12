@@ -225,6 +225,8 @@ namespace QuanLyNhanSu
                 string ctcv1 = ctcv.getlaymacvtheonv(manv);
 
                 ctcv.sua1chitietcv(ctcv1, macv, ngayvaolam);
+                XtraMessageBox.Show("Thành công");
+                NhanVien_Load(sender, e);
 
             }
         }
