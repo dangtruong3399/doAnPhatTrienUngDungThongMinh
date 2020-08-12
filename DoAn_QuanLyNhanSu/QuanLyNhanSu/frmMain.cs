@@ -19,17 +19,17 @@ namespace QuanLyNhanSu
         public frmMain()
         {
             InitializeComponent();
-            DevExpress.LookAndFeel.DefaultLookAndFeel thems = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            thems.LookAndFeel.SkinName = "Xmas 2008 Blue";
+            //DevExpress.LookAndFeel.DefaultLookAndFeel thems = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            //thems.LookAndFeel.SkinName = "Xmas 2008 Blue";
         }
 
         public void Skins()
         {
-            DevExpress.UserSkins.BonusSkins.Register();
+            //DevExpress.UserSkins.BonusSkins.Register();
 
-            DevExpress.UserSkins.OfficeSkins.Register();
+            //DevExpress.UserSkins.OfficeSkins.Register();
 
-            DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(SkinHT, true);
+            //DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(SkinHT, true);
         }
 
         public void loadfrom(Form frm)
@@ -379,7 +379,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                tt.AddTab(xtraTabControl1, "", "Bảo Hiểm", new BaoHiem());
+                tt.AddTab(xtraTabControl1, "", "Bảo Hiểm", new Baohiem());
             }
         }
     }

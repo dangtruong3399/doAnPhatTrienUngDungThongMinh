@@ -29,215 +29,315 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BangLuongg));
-            this.maskedTxtLuongCB = new System.Windows.Forms.MaskedTextBox();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.lbMaNV = new DevExpress.XtraEditors.LabelControl();
+            this.lbTenNV = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.cboxHeSoLuong = new System.Windows.Forms.ComboBox();
-            this.btnSimpleCapNhat = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHeSoLuong = new System.Windows.Forms.MaskedTextBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.gridColumn8 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.txtTroCap = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbThucLinh = new System.Windows.Forms.Label();
+            this.btnTinhLuong = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLuongCB = new System.Windows.Forms.MaskedTextBox();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lbSoNgayCong = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tinhCong = new System.Windows.Forms.Button();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvNV_Luong = new DevExpress.XtraGrid.GridControl();
+            this.gvBangLuong = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtNam = new System.Windows.Forms.MaskedTextBox();
-            this.txtThang = new System.Windows.Forms.TextBox();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.btnSimpleXem = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
+            this.dgvBangLuong = new DevExpress.XtraGrid.GridControl();
+            this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNV_Luong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBangLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBangLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // maskedTxtLuongCB
+            // groupControl1
             // 
-            this.maskedTxtLuongCB.Location = new System.Drawing.Point(607, 5);
-            this.maskedTxtLuongCB.Name = "maskedTxtLuongCB";
-            this.maskedTxtLuongCB.Size = new System.Drawing.Size(100, 21);
-            this.maskedTxtLuongCB.TabIndex = 0;
+            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.Controls.Add(this.lbMaNV);
+            this.groupControl1.Controls.Add(this.lbTenNV);
+            this.groupControl1.Controls.Add(this.labelControl8);
+            this.groupControl1.Controls.Add(this.txtHeSoLuong);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.txtTroCap);
+            this.groupControl1.Controls.Add(this.label8);
+            this.groupControl1.Controls.Add(this.lbThucLinh);
+            this.groupControl1.Controls.Add(this.btnTinhLuong);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.label6);
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.txtLuongCB);
+            this.groupControl1.Controls.Add(this.labelControl6);
+            this.groupControl1.Controls.Add(this.lbSoNgayCong);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Controls.Add(this.tinhCong);
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.panel1);
+            this.groupControl1.Controls.Add(this.flowLayoutPanel1);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Location = new System.Drawing.Point(3, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(1204, 852);
+            this.groupControl1.TabIndex = 2;
+            this.groupControl1.Text = "BẢNG LƯƠNG";
+            // 
+            // lbMaNV
+            // 
+            this.lbMaNV.Location = new System.Drawing.Point(1043, 82);
+            this.lbMaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbMaNV.Name = "lbMaNV";
+            this.lbMaNV.Size = new System.Drawing.Size(53, 16);
+            this.lbMaNV.TabIndex = 26;
+            this.lbMaNV.Text = "<mã nv>";
+            // 
+            // lbTenNV
+            // 
+            this.lbTenNV.Location = new System.Drawing.Point(1044, 116);
+            this.lbTenNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbTenNV.Name = "lbTenNV";
+            this.lbTenNV.Size = new System.Drawing.Size(53, 16);
+            this.lbTenNV.TabIndex = 25;
+            this.lbTenNV.Text = "<tên nv>";
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(133, 9);
+            this.labelControl8.Location = new System.Drawing.Point(937, 80);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(27, 13);
-            this.labelControl8.TabIndex = 8;
-            this.labelControl8.Text = "label";
+            this.labelControl8.Size = new System.Drawing.Size(92, 18);
+            this.labelControl8.TabIndex = 23;
+            this.labelControl8.Text = "Mã Nhân Viên";
             // 
-            // labelControl7
+            // txtHeSoLuong
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(123, 48);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(60, 16);
-            this.labelControl7.TabIndex = 7;
-            this.labelControl7.Text = "Chức Vụ:";
-            // 
-            // cboxHeSoLuong
-            // 
-            this.cboxHeSoLuong.FormattingEnabled = true;
-            this.cboxHeSoLuong.Location = new System.Drawing.Point(328, 4);
-            this.cboxHeSoLuong.Name = "cboxHeSoLuong";
-            this.cboxHeSoLuong.Size = new System.Drawing.Size(157, 21);
-            this.cboxHeSoLuong.TabIndex = 6;
-            // 
-            // btnSimpleCapNhat
-            // 
-            this.btnSimpleCapNhat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnSimpleCapNhat.Appearance.Options.UseFont = true;
-            this.btnSimpleCapNhat.Location = new System.Drawing.Point(818, 2);
-            this.btnSimpleCapNhat.Name = "btnSimpleCapNhat";
-            this.btnSimpleCapNhat.Size = new System.Drawing.Size(75, 23);
-            this.btnSimpleCapNhat.TabIndex = 5;
-            this.btnSimpleCapNhat.Text = "Cập Nhật";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(731, 7);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(29, 16);
-            this.labelControl6.TabIndex = 4;
-            this.labelControl6.Text = "VND";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(508, 7);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(84, 16);
-            this.labelControl5.TabIndex = 3;
-            this.labelControl5.Text = "Lương Cơ Bản";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(235, 5);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(78, 16);
-            this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "Hệ Số Lương";
+            this.txtHeSoLuong.Location = new System.Drawing.Point(1035, 176);
+            this.txtHeSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHeSoLuong.Name = "txtHeSoLuong";
+            this.txtHeSoLuong.Size = new System.Drawing.Size(80, 23);
+            this.txtHeSoLuong.TabIndex = 21;
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 48);
+            this.labelControl3.Location = new System.Drawing.Point(1132, 277);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(49, 16);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "Chức Vụ";
+            this.labelControl3.Size = new System.Drawing.Size(24, 16);
+            this.labelControl3.TabIndex = 17;
+            this.labelControl3.Text = "VND";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 9);
+            this.labelControl2.Location = new System.Drawing.Point(940, 113);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(89, 16);
+            this.labelControl2.Size = new System.Drawing.Size(96, 18);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Tên Nhân Viên";
             // 
-            // gridColumn8
+            // txtTroCap
             // 
-            this.gridColumn8.Caption = "Tổng Cộng";
-            this.gridColumn8.FieldName = "TongCong";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.FixedWidth = true;
-            this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.Visible = true;
+            this.txtTroCap.Location = new System.Drawing.Point(1034, 277);
+            this.txtTroCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTroCap.Name = "txtTroCap";
+            this.txtTroCap.Size = new System.Drawing.Size(80, 23);
+            this.txtTroCap.TabIndex = 13;
             // 
-            // gridColumn7
+            // label8
             // 
-            this.gridColumn7.Caption = "Phụ Cấp";
-            this.gridColumn7.FieldName = "TroCap";
-            this.gridColumn7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn7.ImageOptions.Image")));
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.Width = 113;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(950, 277);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 17);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Trợ cấp";
             // 
-            // gridColumn6
+            // lbThucLinh
             // 
-            this.gridColumn6.Caption = "Tiền Phạt";
-            this.gridColumn6.FieldName = "Tien";
-            this.gridColumn6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn6.ImageOptions.Image")));
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.Width = 132;
+            this.lbThucLinh.AutoSize = true;
+            this.lbThucLinh.Location = new System.Drawing.Point(1039, 316);
+            this.lbThucLinh.Name = "lbThucLinh";
+            this.lbThucLinh.Size = new System.Drawing.Size(81, 17);
+            this.lbThucLinh.TabIndex = 10;
+            this.lbThucLinh.Text = "<thực lĩnh>";
             // 
-            // gridColumn5
+            // btnTinhLuong
             // 
-            this.gridColumn5.Caption = "Tiền Thưởng";
-            this.gridColumn5.FieldName = "Tien";
-            this.gridColumn5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn5.ImageOptions.Image")));
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.Width = 132;
+            this.btnTinhLuong.Location = new System.Drawing.Point(947, 343);
+            this.btnTinhLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTinhLuong.Name = "btnTinhLuong";
+            this.btnTinhLuong.Size = new System.Drawing.Size(87, 28);
+            this.btnTinhLuong.TabIndex = 9;
+            this.btnTinhLuong.Text = "Tính lương";
+            this.btnTinhLuong.UseVisualStyleBackColor = true;
             // 
-            // labelControl1
+            // label2
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(333, 36);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(305, 19);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "BẢNG LƯƠNG CÔNG NHÂN VIÊN CHỨC";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(974, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 6;
             // 
-            // gridColumn4
+            // label6
             // 
-            this.gridColumn4.Caption = "Số Ngày Làm";
-            this.gridColumn4.FieldName = "Ngay";
-            this.gridColumn4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn4.ImageOptions.Image")));
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.Width = 132;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(950, 316);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Thực lĩnh";
             // 
-            // gridColumn2
+            // labelControl5
             // 
-            this.gridColumn2.Caption = "Tên Nhân Viên";
-            this.gridColumn2.FieldName = "TenNV";
-            this.gridColumn2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn2.ImageOptions.Image")));
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.Width = 132;
+            this.labelControl5.Location = new System.Drawing.Point(940, 235);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(88, 17);
+            this.labelControl5.TabIndex = 3;
+            this.labelControl5.Text = "Lương Cơ Bản";
             // 
-            // gridColumn1
+            // txtLuongCB
             // 
-            this.gridColumn1.Caption = "Mã Nhân Viên";
-            this.gridColumn1.FieldName = "MaNhanVien";
-            this.gridColumn1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn1.ImageOptions.Image")));
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.Width = 132;
+            this.txtLuongCB.Location = new System.Drawing.Point(1034, 233);
+            this.txtLuongCB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLuongCB.Name = "txtLuongCB";
+            this.txtLuongCB.Size = new System.Drawing.Size(80, 23);
+            this.txtLuongCB.TabIndex = 0;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(1132, 234);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(24, 16);
+            this.labelControl6.TabIndex = 4;
+            this.labelControl6.Text = "VND";
+            // 
+            // lbSoNgayCong
+            // 
+            this.lbSoNgayCong.AutoSize = true;
+            this.lbSoNgayCong.Location = new System.Drawing.Point(1031, 151);
+            this.lbSoNgayCong.Name = "lbSoNgayCong";
+            this.lbSoNgayCong.Size = new System.Drawing.Size(0, 17);
+            this.lbSoNgayCong.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(940, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Số ngày công:";
+            // 
+            // tinhCong
+            // 
+            this.tinhCong.Location = new System.Drawing.Point(931, 44);
+            this.tinhCong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tinhCong.Name = "tinhCong";
+            this.tinhCong.Size = new System.Drawing.Size(87, 28);
+            this.tinhCong.TabIndex = 0;
+            this.tinhCong.Text = "Tính công";
+            this.tinhCong.UseVisualStyleBackColor = true;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(944, 186);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(80, 17);
+            this.labelControl4.TabIndex = 2;
+            this.labelControl4.Text = "Hệ Số Lương";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvNV_Luong);
+            this.panel1.Location = new System.Drawing.Point(6, 78);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(927, 290);
+            this.panel1.TabIndex = 3;
+            // 
+            // dgvNV_Luong
+            // 
+            this.dgvNV_Luong.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvNV_Luong.Location = new System.Drawing.Point(0, 0);
+            this.dgvNV_Luong.MainView = this.gvBangLuong;
+            this.dgvNV_Luong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvNV_Luong.Name = "dgvNV_Luong";
+            this.dgvNV_Luong.Size = new System.Drawing.Size(920, 276);
+            this.dgvNV_Luong.TabIndex = 0;
+            this.dgvNV_Luong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvBangLuong,
+            this.gridView2});
+            // 
+            // gvBangLuong
+            // 
+            this.gvBangLuong.DetailHeight = 431;
+            this.gvBangLuong.GridControl = this.dgvNV_Luong;
+            this.gvBangLuong.Name = "gvBangLuong";
+            // 
+            // gridView2
+            // 
+            this.gridView2.DetailHeight = 431;
+            this.gridView2.GridControl = this.dgvNV_Luong;
+            this.gridView2.Name = "gridView2";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.dgvBangLuong);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 375);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1164, 295);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // dgvBangLuong
+            // 
+            this.dgvBangLuong.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvBangLuong.Location = new System.Drawing.Point(3, 4);
+            this.dgvBangLuong.MainView = this.bandedGridView1;
+            this.dgvBangLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvBangLuong.Name = "dgvBangLuong";
+            this.dgvBangLuong.Size = new System.Drawing.Size(1146, 273);
+            this.dgvBangLuong.TabIndex = 0;
+            this.dgvBangLuong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.bandedGridView1,
+            this.gridView1});
+            // 
+            // bandedGridView1
+            // 
+            this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand1});
+            this.bandedGridView1.DetailHeight = 431;
+            this.bandedGridView1.GridControl = this.dgvBangLuong;
+            this.bandedGridView1.Name = "bandedGridView1";
             // 
             // gridBand1
             // 
@@ -246,203 +346,84 @@
             this.gridBand1.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand1.AppearanceHeader.Options.UseFont = true;
             this.gridBand1.Caption = "BẢNG LƯƠNG NHÂN VIÊN";
-            this.gridBand1.Columns.Add(this.gridColumn1);
-            this.gridBand1.Columns.Add(this.gridColumn2);
-            this.gridBand1.Columns.Add(this.gridColumn3);
-            this.gridBand1.Columns.Add(this.gridColumn4);
-            this.gridBand1.Columns.Add(this.gridColumn5);
-            this.gridBand1.Columns.Add(this.gridColumn6);
-            this.gridBand1.Columns.Add(this.gridColumn7);
-            this.gridBand1.Columns.Add(this.gridColumn8);
             this.gridBand1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridBand1.ImageOptions.Image")));
+            this.gridBand1.MinWidth = 12;
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 980;
+            this.gridBand1.Width = 154;
             // 
-            // gridColumn3
+            // gridView1
             // 
-            this.gridColumn3.Caption = "Hệ Số Lương";
-            this.gridColumn3.FieldName = "HeSoLuong";
-            this.gridColumn3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn3.ImageOptions.Image")));
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.Width = 132;
+            this.gridView1.DetailHeight = 431;
+            this.gridView1.GridControl = this.dgvBangLuong;
+            this.gridView1.Name = "gridView1";
             // 
-            // bandedGridView1
+            // labelControl1
             // 
-            this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand1});
-            this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8});
-            this.bandedGridView1.GridControl = this.gridControl1;
-            this.bandedGridView1.Name = "bandedGridView1";
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
-            this.gridControl1.MainView = this.bandedGridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(928, 200);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.bandedGridView1});
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.gridControl1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 159);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(936, 213);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // txtNam
-            // 
-            this.txtNam.Location = new System.Drawing.Point(759, 7);
-            this.txtNam.Name = "txtNam";
-            this.txtNam.Size = new System.Drawing.Size(91, 21);
-            this.txtNam.TabIndex = 13;
-            // 
-            // txtThang
-            // 
-            this.txtThang.Location = new System.Drawing.Point(640, 7);
-            this.txtThang.Name = "txtThang";
-            this.txtThang.Size = new System.Drawing.Size(100, 21);
-            this.txtThang.TabIndex = 12;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(746, 5);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(7, 24);
-            this.labelControl10.TabIndex = 11;
-            this.labelControl10.Text = "/";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(484, 11);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(149, 16);
-            this.labelControl9.TabIndex = 10;
-            this.labelControl9.Text = "Bảng Lương Theo Tháng";
-            // 
-            // btnSimpleXem
-            // 
-            this.btnSimpleXem.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnSimpleXem.Appearance.Options.UseFont = true;
-            this.btnSimpleXem.Location = new System.Drawing.Point(856, 5);
-            this.btnSimpleXem.Name = "btnSimpleXem";
-            this.btnSimpleXem.Size = new System.Drawing.Size(75, 23);
-            this.btnSimpleXem.TabIndex = 9;
-            this.btnSimpleXem.Text = "Xem";
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Controls.Add(this.txtNam);
-            this.panelControl3.Controls.Add(this.txtThang);
-            this.panelControl3.Controls.Add(this.labelControl10);
-            this.panelControl3.Controls.Add(this.labelControl9);
-            this.panelControl3.Controls.Add(this.btnSimpleXem);
-            this.panelControl3.Location = new System.Drawing.Point(5, 378);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(936, 34);
-            this.panelControl3.TabIndex = 2;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
-            this.groupControl1.Controls.Add(this.panelControl3);
-            this.groupControl1.Controls.Add(this.flowLayoutPanel1);
-            this.groupControl1.Controls.Add(this.panelControl2);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(946, 420);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "BẢNG LƯƠNG";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.maskedTxtLuongCB);
-            this.panelControl2.Controls.Add(this.labelControl8);
-            this.panelControl2.Controls.Add(this.labelControl7);
-            this.panelControl2.Controls.Add(this.cboxHeSoLuong);
-            this.panelControl2.Controls.Add(this.btnSimpleCapNhat);
-            this.panelControl2.Controls.Add(this.labelControl6);
-            this.panelControl2.Controls.Add(this.labelControl5);
-            this.panelControl2.Controls.Add(this.labelControl4);
-            this.panelControl2.Controls.Add(this.labelControl3);
-            this.panelControl2.Controls.Add(this.labelControl2);
-            this.panelControl2.Location = new System.Drawing.Point(5, 82);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(936, 71);
-            this.panelControl2.TabIndex = 1;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(388, 44);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(381, 23);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "BẢNG LƯƠNG CÔNG NHÂN VIÊN CHỨC";
             // 
             // BangLuongg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BangLuongg";
-            this.Size = new System.Drawing.Size(955, 434);
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
+            this.Size = new System.Drawing.Size(1197, 686);
+            this.Load += new System.EventHandler(this.BangLuongg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNV_Luong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBangLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBangLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTxtLuongCB;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.LabelControl lbMaNV;
+        private DevExpress.XtraEditors.LabelControl lbTenNV;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private System.Windows.Forms.ComboBox cboxHeSoLuong;
-        private DevExpress.XtraEditors.SimpleButton btnSimpleCapNhat;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.MaskedTextBox txtHeSoLuong;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn8;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn7;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn6;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn5;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn4;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn2;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn3;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.MaskedTextBox txtTroCap;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbThucLinh;
+        private System.Windows.Forms.Button btnTinhLuong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private System.Windows.Forms.MaskedTextBox txtLuongCB;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private System.Windows.Forms.Label lbSoNgayCong;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button tinhCong;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraGrid.GridControl dgvNV_Luong;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvBangLuong;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.MaskedTextBox txtNam;
-        private System.Windows.Forms.TextBox txtThang;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.SimpleButton btnSimpleXem;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraGrid.GridControl dgvBangLuong;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

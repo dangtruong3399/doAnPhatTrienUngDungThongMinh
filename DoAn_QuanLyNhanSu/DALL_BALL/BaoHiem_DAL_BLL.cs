@@ -9,6 +9,11 @@ namespace DALL_BALL
    public class BaoHiem_DAL_BLL
     {
         QuanLyNhanSuDataContext data = new QuanLyNhanSuDataContext();
+
+        public List<BaoHiem> dsbaohiem()
+        {
+            return data.BaoHiems.ToList();
+        }
         public IQueryable laybaobaohiem()
         {
             var ds = from k in data.BaoHiems

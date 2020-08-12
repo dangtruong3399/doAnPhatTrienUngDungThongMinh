@@ -131,11 +131,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoHiem.cs">
+    <Compile Include="Baohiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BaoHiem.Designer.cs">
-      <DependentUpon>BaoHiem.cs</DependentUpon>
+    <Compile Include="Baohiem.Designer.cs">
+      <DependentUpon>Baohiem.cs</DependentUpon>
     </Compile>
     <Compile Include="QLNguoiDung.cs">
       <SubType>UserControl</SubType>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoHiem.resx">
-      <DependentUpon>BaoHiem.cs</DependentUpon>
+    <EmbeddedResource Include="Baohiem.resx">
+      <DependentUpon>Baohiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNguoiDung.resx">
       <DependentUpon>QLNguoiDung.cs</DependentUpon>

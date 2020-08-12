@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DALL_BALL;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyNhanSu
 {
-    public partial class BaoHiem : DevExpress.XtraEditors.XtraUserControl
+    public partial class Baohiem : DevExpress.XtraEditors.XtraUserControl
     {
         BaoHiem_DAL_BLL bh = new BaoHiem_DAL_BLL();
         bool add = false, update = false;
@@ -26,14 +27,39 @@ namespace QuanLyNhanSu
             btnSua.Enabled = true;
             databinds(true);
         }
+        public void hienthi(bool t)
+        {
+            txtTenNV.Enabled = t;
+            txtMaSoThe.Enabled = t;
+            txtNoiCap.Enabled = t;
+            dateNgayCap.Enabled = t;
+           
+            dateNgayHetHan.Enabled = t;
+           
+
+        }
+        public void resetvalues()
+        {
+            txtTenNV.Text = "";
+            txtMaSoThe.Text = "";
+            txtNoiCap.Text = "";
+            dateNgayCap.Text = "";
+            dateNgayHetHan.Text = "";
+            cboLoai.Text = "";
+            
+
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+           
             add = true;
             update = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
             databinds(false);
+            resetvalues();
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -44,7 +70,7 @@ namespace QuanLyNhanSu
             btnThem.Enabled = false;
         }
 
-        public BaoHiem()
+        public Baohiem()
         {
             InitializeComponent();
         }
@@ -77,6 +103,78 @@ namespace QuanLyNhanSu
                 BaoHiem_Load(sender, e);
                 XtraMessageBox.Show("Thành công");
             }
+        }
+
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            BaoHiem_Load(sender, e);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.Application application = new Excel.Application();
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+
+
+
+            workbook = application.Workbooks.Add(Type.Missing);
+            application.Visible = true;
+            application.WindowState = Excel.XlWindowState.xlMaximized;
+            //getdatabase   
+            workbook.Worksheets.Add();
+            worksheet = workbook.Sheets[1];
+            worksheet.Cells[1, 1] = "Dach sách bảo hiểm nhân viên";
+            worksheet.Cells[3, 1] = "STT";
+            worksheet.Cells[3, 2] = "Mã Bảo Hiểm";
+            worksheet.Cells[3, 3] = "Mã Nhân Viên";
+            worksheet.Cells[3, 4] = "Tên Nhân Viên";
+            worksheet.Cells[3, 5] = "Loại Bảo Hiểm";
+            worksheet.Cells[3, 6] = "Ngày Hết Hạn";
+            worksheet.Cells[3, 7] = "Ngày Cấp";
+            worksheet.Cells[3, 8] = "Số Thẻ";
+            worksheet.Cells[3, 9] = "Nơi Cấp";
+
+            /// int j = 1;
+            List<BaoHiem> lst = new List<BaoHiem>();
+            lst = bh.dsbaohiem();
+            for (int i = 0; i < lst.Count; i++)
+            {
+
+
+                worksheet.Cells[i + 4, 1] = i + 1;
+                worksheet.Cells[i + 4, 2] = lst[i].MaBaoHiem;
+                worksheet.Cells[i + 4, 3] = lst[i].MaNhanVien;
+                worksheet.Cells[i + 4, 4] = lst[i].NhanVien.TenNV;
+                worksheet.Cells[i + 4, 5] = lst[i].LoaiBaoHiem;
+                worksheet.Cells[i + 4, 6] = lst[i].NgayHetHan;
+                worksheet.Cells[i + 4, 7] = lst[i].NgayCap;
+                worksheet.Cells[i + 4, 8] = lst[i].SoThe;
+                worksheet.Cells[i + 4, 9] = lst[i].NoiCap;
+
+            }
+
+            // định dạng trang
+            worksheet.PageSetup.Orientation = Excel.XlPageOrientation.xlPortrait;
+            worksheet.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+            worksheet.PageSetup.LeftMargin = 0;
+            worksheet.PageSetup.RightMargin = 0;
+            worksheet.PageSetup.BottomMargin = 0;
+            worksheet.PageSetup.TopMargin = 0;
+
+            
+            worksheet.Range["A1", "G100"].Font.Name = "Times New Roman";
+            worksheet.Range["A1", "E100"].Font.Size = 12;
+            worksheet.Range["A1", "H1"].MergeCells = true;
+            worksheet.Range["A1", "K3"].Font.Bold = true;
+
+            // kẻ bảng bảo hiểm
+            worksheet.Range["A3", "I" + (lst.Count + 3)].Borders.LineStyle = 1;
+            // định dạng các dòng
+            worksheet.Range["A1", "G1"].HorizontalAlignment = 3;
+            worksheet.Range["A3", "K3"].HorizontalAlignment = 3;
+            worksheet.Range["A4", "K" + (lst.Count - 1 + 4)].HorizontalAlignment = 3;
+            worksheet.Columns.AutoFit();
         }
 
         public void loadbaohiem()

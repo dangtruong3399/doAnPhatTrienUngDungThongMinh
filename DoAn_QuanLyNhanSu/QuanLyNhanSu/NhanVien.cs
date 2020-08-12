@@ -43,8 +43,11 @@ namespace QuanLyNhanSu
             dateNgaySinh.EditValue = DateTime.Now;
             dateNgayVaoLam.EditValue = DateTime.Now;
             //loadgt();
-           
-            
+            gridView1.OptionsView.ColumnAutoWidth = true;
+            gridView1.OptionsView.BestFitMaxRowCount = -1;
+            gridView1.BestFitColumns();
+
+
 
         }
         public void loadnv()

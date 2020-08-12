@@ -439,8 +439,6 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barBtnItemDoiMatKhau);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barBtnItemThongTin);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtnItemTaoTK);
             this.ribbonPageGroup3.ItemLinks.Add(this.bbarBtnItemDangXuat);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtnItemThoat);

@@ -47,6 +47,9 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dsphongban = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -118,7 +121,7 @@
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl5.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.labelControl5.LineVisible = true;
-            this.labelControl5.Location = new System.Drawing.Point(359, 44);
+            this.labelControl5.Location = new System.Drawing.Point(498, 44);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(388, 38);
@@ -128,7 +131,7 @@
             // btnXoa
             // 
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(644, 269);
+            this.btnXoa.Location = new System.Drawing.Point(876, 275);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(109, 41);
@@ -140,7 +143,7 @@
             // 
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLuu.Location = new System.Drawing.Point(462, 269);
+            this.btnLuu.Location = new System.Drawing.Point(694, 275);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 41);
@@ -151,7 +154,7 @@
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(291, 269);
+            this.btnSua.Location = new System.Drawing.Point(523, 275);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(109, 41);
@@ -162,7 +165,7 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(126, 269);
+            this.btnThem.Location = new System.Drawing.Point(358, 275);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(109, 41);
@@ -172,7 +175,7 @@
             // 
             // txtTenPb
             // 
-            this.txtTenPb.Location = new System.Drawing.Point(251, 193);
+            this.txtTenPb.Location = new System.Drawing.Point(390, 193);
             this.txtTenPb.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtTenPb.Name = "txtTenPb";
             this.txtTenPb.Size = new System.Drawing.Size(320, 22);
@@ -180,7 +183,7 @@
             // 
             // txtMapb
             // 
-            this.txtMapb.Location = new System.Drawing.Point(251, 140);
+            this.txtMapb.Location = new System.Drawing.Point(390, 140);
             this.txtMapb.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtMapb.Name = "txtMapb";
             this.txtMapb.Size = new System.Drawing.Size(320, 22);
@@ -190,7 +193,7 @@
             // 
             this.lbSoNV.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.lbSoNV.Appearance.Options.UseFont = true;
-            this.lbSoNV.Location = new System.Drawing.Point(762, 143);
+            this.lbSoNV.Location = new System.Drawing.Point(901, 143);
             this.lbSoNV.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lbSoNV.Name = "lbSoNV";
             this.lbSoNV.Size = new System.Drawing.Size(44, 22);
@@ -201,7 +204,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(609, 142);
+            this.labelControl4.Location = new System.Drawing.Point(748, 142);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(121, 23);
@@ -212,7 +215,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(98, 139);
+            this.labelControl3.Location = new System.Drawing.Point(237, 139);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(114, 22);
@@ -223,7 +226,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(98, 193);
+            this.labelControl2.Location = new System.Drawing.Point(237, 193);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(122, 22);
@@ -232,7 +235,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(487, 47);
+            this.labelControl1.Location = new System.Drawing.Point(626, 47);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(0, 16);
@@ -260,9 +263,43 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
             this.gridView1.GridControl = this.dsphongban;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã Phòng Ban";
+            this.gridColumn1.FieldName = "MaPB";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên Phòng Ban";
+            this.gridColumn2.FieldName = "TenPB";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 94;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Số Nhân Viên";
+            this.gridColumn3.FieldName = "SoNV";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 94;
             // 
             // PhongBan
             // 
@@ -312,5 +349,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl dsphongban;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

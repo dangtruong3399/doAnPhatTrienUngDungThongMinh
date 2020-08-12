@@ -56,9 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BangLuong_BLL_DAL.cs" />
+    <Compile Include="BangLuong_DAL_BLL.cs" />
     <Compile Include="BaoHiem_DAL_BLL.cs" />
-    <Compile Include="ChamCong_BLL_DAL.cs" />
+    <Compile Include="ChamCong_DAL_BLL.cs" />
     <Compile Include="Chitietcv_DAL_BLL.cs" />
     <Compile Include="ChucVu_DAL_BLL.cs" />
     <Compile Include="HopDong_DAL_BLL.cs" />
